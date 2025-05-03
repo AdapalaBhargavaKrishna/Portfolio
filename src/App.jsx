@@ -1,12 +1,20 @@
 import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Projects from "./pages/Projects"
+import Contact from "./pages/Contact"
 
 function App() {
 
   return (
     <>
-    <div className="min-h-screen bg-black">
+    <main className="relative min-h-screen w-screen overflow-x-hidden">
       <Navbar />
-    </div>
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </main>
     </>
   )
 }
