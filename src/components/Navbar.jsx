@@ -4,7 +4,7 @@ import gsap from "gsap";
 
 
 const NavBar = () => {
-  
+
   const navItems = ["Home", "About", "Projects", "Contact"];
 
   const navContainerRef = useRef(null);
@@ -39,12 +39,15 @@ const NavBar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-2 text-black z-50 h-[4.5rem] border-none transition-all duration-700 sm:inset-x-2"
+      className="fixed inset-x-0 top-2 z-50 h-[4.5rem] border-none transition-all duration-700 sm:inset-x-2"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-          <div className="flex items-center gap-7">
-            <h2 className="font-bold text-xl">Bhargava Krishna</h2>
+          <div className="flex items-center gap-2">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-gray-800 to-gray-900 text-white shadow-lg">
+              <span className="font-display text-lg font-bold tracking-wider">BK</span>
+            </div>
+            <h2 className="text-blue-50 font-bold text-xl">Bhargava Krishna</h2>
           </div>
           <div className="flex h-full items-center">
             <div className="hidden md:block">

@@ -10,14 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
     "animejs": "^4.0.2",
-    "framer-motion": "^12.9.6",
+    "framer-motion": "^12.10.2",
+    "github-calendar": "^2.3.4",
     "gsap": "^3.13.0",
     "lucide-react": "^0.507.0",
+    "maath": "^0.10.8",
     "motion": "^12.9.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-parallax-tilt": "^1.7.295",
     "react-router-dom": "^7.5.3",
     "react-use": "^17.6.0",
     "three": "^0.176.0"
