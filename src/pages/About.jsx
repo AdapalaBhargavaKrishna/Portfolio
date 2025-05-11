@@ -17,8 +17,12 @@ import mysqlLogo from '../assets/svg/mysql.svg';
 import netlifyLogo from '../assets/svg/netlify.svg';
 import nodeLogo from '../assets/svg/node.svg';
 import postmanLogo from '../assets/svg/postman.svg';
+import cloudLogo from '../assets/svg/cloud.svg';
 import pythonLogo from '../assets/svg/python.svg';
 import reactjsLogo from '../assets/svg/reactjs.svg';
+import expressjsLogo from '../assets/svg/expressjs.svg';
+import FramerLogo from '../assets/svg/framermotion.svg';
+import gsapLogo from '../assets/svg/gsap.svg';
 import tailwindLogo from '../assets/svg/tailwind.svg';
 import npmLogo from '../assets/svg/npm.svg';
 import vercelLogo from '../assets/svg/vercel.svg';
@@ -41,11 +45,15 @@ const About = () => {
     { name: 'JavaScript', logo: javascriptLogo },
     { name: 'React', logo: reactjsLogo },
     { name: 'Node.js', logo: nodeLogo },
+    { name: 'express.js', logo: expressjsLogo },
     { name: 'Python', logo: pythonLogo },
     { name: 'Java', logo: javaLogo },
     { name: 'Tailwind', logo: tailwindLogo },
+    { name: 'Framer Motion', logo: FramerLogo },
+    { name: 'GSAP', logo: gsapLogo },
     { name: 'MongoDB', logo: mongodbLogo },
     { name: 'MySQL', logo: mysqlLogo },
+    { name: 'Cloud', logo: cloudLogo },
     { name: 'Firebase', logo: firebaseLogo },
     { name: 'Git', logo: gitLogo },
     { name: 'GitHub', logo: githubwLogo },
@@ -145,19 +153,19 @@ const About = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}
-            className="backdrop-blur-0 md:p-6 py-4 rounded-2xl md:shadow-xl md:max-w-5xl w-full md:border md:border-white/10 text-white"
+            className="backdrop-blur-0 md:p-6 py-4 rounded-2xl md:shadow-xl md:max-w-6xl w-full md:border md:border-white/10 text-white"
           >
             <h2 className="text-2xl font-semibold text-center mb-4">Technologies I Work With</h2>
             <div>
               <div>
 
-                <div className='hidden md:grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 gap-4 mt-4'>
+                <div className='hidden md:grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-4'>
                   {techStack.map((tech, index) => (
                     <div
                       key={`desktop-${index}`}
                       className='flex md:border items-center justify-around rounded-xl backdrop-blur-sm md:bg-white/5 p-1 md:w-40 text-sm text-white hover:scale-105 transition cursor-pointer'>
                       <img src={tech.logo} alt={tech.name} className='w-10 h-10' />
-                      <span className='hidden md:block mt-2 text-xs text-center'>{tech.name}</span>
+                      <span className='hidden md:block mt-2 text-xs font-semibold text-center'>{tech.name}</span>
                     </div>
                   ))}
                 </div>
