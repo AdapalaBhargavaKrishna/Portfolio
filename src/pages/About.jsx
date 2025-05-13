@@ -7,64 +7,15 @@ import downloadlogo from '../assets/svg/download.svg';
 import ImageCarousel from '../components/ImageCarousel'
 import TechStack from '../components/TechStack'
 
-import firebaseLogo from '../assets/svg/firebase.svg';
-import gitLogo from '../assets/svg/git.svg';
-import githubwLogo from '../assets/svg/githubw.svg';
-import htmlLogo from '../assets/svg/html.svg';
-import cssLogo from '../assets/svg/css.svg';
-import javaLogo from '../assets/svg/java.svg';
-import javascriptLogo from '../assets/svg/javascript.svg';
-import mongodbLogo from '../assets/svg/mongodb.svg';
-import mysqlLogo from '../assets/svg/mysql.svg';
-import netlifyLogo from '../assets/svg/netlify.svg';
-import nodeLogo from '../assets/svg/node.svg';
-import postmanLogo from '../assets/svg/postman.svg';
-import cloudLogo from '../assets/svg/cloud.svg';
-import pythonLogo from '../assets/svg/python.svg';
-import reactjsLogo from '../assets/svg/reactjs.svg';
-import expressjsLogo from '../assets/svg/expressjs.svg';
-import FramerLogo from '../assets/svg/framermotion.svg';
-import gsapLogo from '../assets/svg/gsap.svg';
-import tailwindLogo from '../assets/svg/tailwind.svg';
-import npmLogo from '../assets/svg/npm.svg';
-import vercelLogo from '../assets/svg/vercel.svg';
-import vscodeLogo from '../assets/svg/vscode.svg';
-
 const About = () => {
-
   const { scrollYProgress } = useScroll({
     offset: ["start start", "end start"]
   });
 
   const height = useTransform(scrollYProgress, [0, 0.25], ['70vh', '100vh']);
-  const width = useTransform(scrollYProgress, [0, 0.25], ['90%', '100%']);
-  const borderRadius = useTransform(scrollYProgress, [0, 0.25], ['70px', '0px']);
+  const width = useTransform(scrollYProgress, [0, 0.1], ['80%', '100%']);
+  const borderRadius = useTransform(scrollYProgress, [0, 0.22], ['70px', '0px']);
   const padding = useTransform(scrollYProgress, [0, 0.25], ['24px', '0px']);
-
-  const techStack = [
-    { name: 'HTML', logo: htmlLogo },
-    { name: 'CSS', logo: cssLogo },
-    { name: 'JavaScript', logo: javascriptLogo },
-    { name: 'React', logo: reactjsLogo },
-    { name: 'Node.js', logo: nodeLogo },
-    { name: 'express.js', logo: expressjsLogo },
-    { name: 'Python', logo: pythonLogo },
-    { name: 'Java', logo: javaLogo },
-    { name: 'Tailwind', logo: tailwindLogo },
-    { name: 'Framer Motion', logo: FramerLogo },
-    { name: 'GSAP', logo: gsapLogo },
-    { name: 'MongoDB', logo: mongodbLogo },
-    { name: 'MySQL', logo: mysqlLogo },
-    { name: 'Cloud', logo: cloudLogo },
-    { name: 'Firebase', logo: firebaseLogo },
-    { name: 'Git', logo: gitLogo },
-    { name: 'GitHub', logo: githubwLogo },
-    { name: 'Npm', logo: npmLogo },
-    { name: 'VS Code', logo: vscodeLogo },
-    { name: 'Postman', logo: postmanLogo },
-    { name: 'Vercel', logo: vercelLogo },
-    { name: 'Netlify', logo: netlifyLogo },
-  ];
 
   return (
     <motion.div
@@ -72,10 +23,10 @@ const About = () => {
       className='flex flex-col items-center about-background mx-auto min-h-max'
       style={{ height, width, borderRadius, padding }}
     >
-      <div className="w-full px-3 md:px-6 py-9">
+      <div className="w-full px-3 md:px-6 py-4">
         <div className='flex flex-col items-center justify-center'>
 
-          <div className='bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center p-1'>
+          <div className='bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center p-1'>
             <div className="flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-gray-800 to-gray-900 text-white shadow-lg">
               <span className="font-display text-xl md:text-2xl font-bold tracking-wider">BK</span>
             </div>
@@ -86,7 +37,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="bg-white/5 backdrop-blur-sm space-y-4 p-4 rounded-2xl border border-white/10 shadow-xl w-full max-w-4xl mt-5"
+            className="bg-white/5 backdrop-blur-sm space-y-2 p-4 rounded-2xl border border-white/10 shadow-xl w-full max-w-4xl mt-2"
           >
             <h1 className='font-bold text-[1.7rem] md:text-4xl text-center text-black'>About Me</h1>
             <p className='text-center font-normal text-base'>I'm Bhargava, a passionate full-stack developer driven by a love for building seamless digital experiences. From crafting responsive frontends to designing robust backends, I enjoy turning complex challenges into clean, scalable code. My stack includes React.js, Node.js, and more, and I'm constantly leveling up my skills.</p>
@@ -149,7 +100,7 @@ const About = () => {
 
             </motion.div>
 
-            <div className='mt-10 w-1/2'>
+            <div className='w-1/2'>
               <ImageCarousel />
             </div>
           </div>

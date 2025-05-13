@@ -58,7 +58,7 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="min-h-max py-16 text-white flex flex-col items-center justify-center">
+    <div className="py-16 text-white flex flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -73,16 +73,25 @@ const TechStack = () => {
         {rows.map((row, rowIndex) => (
           <div
             key={`row-${rowIndex}`}
-            className="flex flex-wrap justify-center gap-4"
+            className="flex flex-wrap justify-center gap-4 perspective"
           >
             {row.map((tech, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 0, }}
+                whileInView={{ opacity: 1, scale: 1,}}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: false, amount: 0.4 }}
                 key={`${tech.name}-${index}`}
                 className="flex items-center justify-around gap-2 px-4 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:scale-105 transition transform duration-300"
               >
                 <img src={tech.logo} alt={tech.name} className="w-8 h-8" />
                 <span className="text-sm font-medium">{tech.name}</span>
-              </div>
+              </motion.div>
+
             ))}
           </div>
         ))}

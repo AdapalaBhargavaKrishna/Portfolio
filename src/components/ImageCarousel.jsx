@@ -58,7 +58,7 @@ export default function ImageCarousel() {
           return (
             <motion.div
               key={index}
-              className={`absolute w-64 h-80 rounded-2xl overflow-hidden shadow-xl transform transition-all duration-700 ease-in-out ${translate} ${className}`}
+              className={`absolute w-60 h-80 rounded-2xl overflow-hidden shadow-xl transform transition-all duration-700 ease-in-out ${translate} ${className}`}
             >
               <img
                 src={img.src}
