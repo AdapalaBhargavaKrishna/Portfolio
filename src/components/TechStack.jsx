@@ -77,14 +77,14 @@ const TechStack = () => {
           >
             {row.map((tech, index) => (
               <motion.div
-                initial={{ opacity: 0, scale: 0, }}
+                initial={{ opacity: 0, scale: 0.9, }}
                 whileInView={{ opacity: 1, scale: 1,}}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.6,
                   ease: "easeOut",
                   delay: index * 0.1,
                 }}
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: false, amount: 0 }}
                 key={`${tech.name}-${index}`}
                 className="flex items-center justify-around gap-2 px-4 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:scale-105 transition transform duration-300"
               >

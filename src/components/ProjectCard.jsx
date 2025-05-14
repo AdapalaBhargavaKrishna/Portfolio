@@ -30,7 +30,7 @@ const HoverCard = () => {
         />
       </div>
 
-      <div className="w-full h-1/2 p-4 bg-white bg-opacity-80 rounded-b-2xl flex flex-col gap-4">
+      <div className="w-full h-1/2 p-4 bg-[#090c14] bg-opacity-80 rounded-b-2xl flex flex-col gap-4">
         <h3 className="text-xl font-bold text-gray-800">Awesome Project</h3>
         <div className="flex flex-wrap gap-2 mt-1">
           <span className="text-xs px-3 py-1 rounded-full bg-blue-100 text-blue-700">React</span>

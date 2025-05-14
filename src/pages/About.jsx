@@ -46,13 +46,13 @@ const About = () => {
 
           </motion.div>
 
-          <div className="flex items-center justify-around md:w-[60%]">
+          <div className="flex md:flex-row flex-col-reverse items-center justify-around md:w-[60%]">
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="backdrop-blur-sm p-6 rounded-3xl shadow-2xl max-w-2xl border border-white/20">
+              className="backdrop-blur-sm p-6 rounded-3xl shadow-2xl max-w-2xl border border-white/20 mt-10 md:mt-0">
               <div className="flex flex-col items-center justify-between gap-6">
                 <h2 className="text-2xl font-semibold text-center text-black">
                   Let's Connect
@@ -118,58 +118,3 @@ const About = () => {
 };
 
 export default About;
-
-
-{/* <motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.2, duration: 0.4 }}
-  className="backdrop-blur-0 md:p-6 py-4 rounded-2xl md:shadow-xl md:max-w-6xl w-full md:border md:border-white/10 text-white"
->
-  <h2 className="text-2xl font-semibold text-center mb-4">Technologies I Work With</h2>
-  <div>
-    <div>
-
-      <div className='hidden md:grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-4'>
-        {techStack.map((tech, index) => (
-          <div
-            key={`desktop-${index}`}
-            className='flex md:border items-center justify-around rounded-xl backdrop-blur-sm md:bg-white/5 p-1 md:w-40 text-sm text-white hover:scale-105 transition cursor-pointer'>
-            <img src={tech.logo} alt={tech.name} className='w-10 h-10' />
-            <span className='hidden md:block mt-2 text-xs font-semibold text-center'>{tech.name}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className='md:hidden space-y-4 mt-4'>
-
-        <div className='relative overflow-x-auto scrollbar-hide group'>
-          <div className='flex animate-marquee-left group-hover:animation-pause w-max gap-4'>
-            {techStack.slice(0, Math.ceil(techStack.length / 2)).map((tech, index) => (
-              <div
-                key={`mobile-top-${index}`}
-                className='flex-shrink-0 flex border items-center justify-around rounded-xl backdrop-blur-sm bg-white/5 p-2 w-32 text-sm text-white hover:scale-105 transition cursor-pointer'>
-                <img src={tech.logo} alt={tech.name} className='w-8 h-8' />
-                <span className='mt-1 text-xs text-center block'>{tech.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className='relative overflow-x-auto scrollbar-hide group'>
-          <div className='flex animate-marquee-right group-hover:animation-pause w-max gap-4'>
-            {techStack.slice(Math.ceil(techStack.length / 2)).map((tech, index) => (
-              <div
-                key={`mobile-bottom-${index}`}
-                className='flex-shrink-0 flex border items-center justify-around rounded-xl backdrop-blur-sm bg-white/5 p-2 w-32 text-sm text-white hover:scale-105 transition cursor-pointer'>
-                <img src={tech.logo} alt={tech.name} className='w-8 h-8' />
-                <span className='mt-1 text-xs text-center block'>{tech.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</motion.div> */}
