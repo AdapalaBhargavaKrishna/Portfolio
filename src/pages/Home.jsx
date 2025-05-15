@@ -57,7 +57,7 @@ const Home = () => {
               <div className="inline-block px-2 py-1 rounded-full bg-gradient-to-r from-gray-500/10 to-gray-500/10 border border-gray-700">
                 <div className="flex items-center gap-2">
                   <span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#2c83ff,45%,#549aff,55%,#2c83ff)] bg-[length:250%_100%] px-2 py-1 rounded-xl text-xs font-medium text-white">New!</span>
-                  <a href="https://newzzx.netlify.app/" className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#d9d9d9,45%,#1e293b,55%,#d9d9d9)] bg-[length:250%_100%] bg-clip-text text-md font-semibold text-transparent hover:underline">View my latest project NewzX →</a>
+                  <a href="https://newzzx.netlify.app/" target="_blank" className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#d9d9d9,45%,#1e293b,55%,#d9d9d9)] bg-[length:250%_100%] bg-clip-text text-md font-semibold text-transparent hover:underline">View my latest project NewzX →</a>
                 </div>
               </div>
 

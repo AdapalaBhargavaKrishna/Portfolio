@@ -86,7 +86,7 @@ const TechStack = () => {
                 }}
                 viewport={{ once: false, amount: 0 }}
                 key={`${tech.name}-${index}`}
-                className="flex items-center justify-around gap-2 px-4 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:scale-105 transition transform duration-300"
+                className="flex items-center justify-around gap-2 px-4 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:scale-105 transition transform duration-300 cursor-pointer"
               >
                 <img src={tech.logo} alt={tech.name} className="w-8 h-8" />
                 <span className="text-sm font-medium">{tech.name}</span>
