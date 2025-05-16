@@ -35,7 +35,7 @@ const Home = () => {
             scale,
             opacity,
             position: 'relative',
-            zIndex: 10,
+            // zIndex: 10,
             height: '100vh',
           }}
           className="flex items-center justify-center w-full text-white"
