@@ -3,8 +3,21 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 
 const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0);
-
+  const [disablePointerEvents, setDisablePointerEvents] = useState(false);
   const { scrollYProgress } = useScroll();
+
+  useEffect(() => {
+  const unsubscribe = scrollYProgress.on("change", (v) => {
+    if (v < 0.14) {
+      setDisablePointerEvents(false);
+    } else {
+      setDisablePointerEvents(true);
+    }
+  });
+
+  return () => unsubscribe();
+}, [scrollYProgress]);
+
 
   const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.8]);
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
@@ -35,10 +48,11 @@ const Home = () => {
             scale,
             opacity,
             position: 'relative',
-            // zIndex: 10,
             height: '100vh',
           }}
-          className="flex items-center justify-center w-full text-white"
+          className={`flex items-center justify-center w-full text-white ${
+    disablePointerEvents ? 'pointer-events-none' : ''
+  }`}
         >
           <div className="flex flex-col items-center w-full">
             <motion.div

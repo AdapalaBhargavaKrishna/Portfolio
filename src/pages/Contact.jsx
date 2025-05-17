@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
+import Footer from "../components/Footer"
 
 const Contact = () => {
 
@@ -64,6 +65,9 @@ const Contact = () => {
           </div>
         </form>
       </div>
+
+      <Footer />
+      
     </motion.div>
   );
 };

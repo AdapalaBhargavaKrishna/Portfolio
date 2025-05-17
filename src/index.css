@@ -55,6 +55,6 @@ html {
   display: none;
 }
 
-.perspective {
-  perspective: 1000px;
+.project-heading {
+    font-family: "NyghtSerif", "NyghtSerif Fallback";
 }
