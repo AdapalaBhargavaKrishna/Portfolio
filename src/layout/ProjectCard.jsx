@@ -22,7 +22,7 @@ const ProjectCard = ({ project }) => {
     >
 
       {/* Image container */}
-      <div className="w-full h-80 overflow-hidden rounded-t-2xl">
+      <div className="w-full h-64 md:h-80 overflow-hidden rounded-t-2xl">
         <img
           src={image}
           alt={`${title} screenshot`}
