@@ -1,0 +1,42 @@
+export const projectData = [
+  {
+    title: "Attendz - Attendance Calculator",
+    description: "A comprehensive college management platform for students and faculty. It centralizes attendance tracking, academic performance, fee management, timetables, and announcements in a user-friendly interface with responsive design.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendz.png",
+    live: "https://adapalabhargavakrishna.github.io/Web-Development/AttendEz/index.html",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    title: "NewzX - News That Matters to You",
+    description: "A dynamic news website with real-time headlines and powerful search functionality. Users can filter topics and get personalized news with a sleek, intuitive design that works seamlessly across devices.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/newzx.png",
+    live: "https://newzzx.netlify.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    tech: ["React", "Tailwind", "Framer Motion", "API", "Netlify"],
+  },
+  {
+    title: "MovieShelf - Your Personal Cinema Universe",
+    description: "A movie watchlist app with Firebase authentication, allowing users to search, save, and organize films. It provides detailed movie info, including ratings, cast, and trailers, creating a perfect companion for movie lovers.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/movieshelf.png",
+    live: "https://movieshelf-bk.netlify.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    tech: ["React", "Tailwind", "GSAP", "API", "Firebase"],
+  },
+  {
+    title: "RecipeMate - Your Kitchen Companion",
+    description: "A recipe discovery platform with step-by-step instructions, ingredient lists, and video tutorials. It offers diverse culinary options through API integration, making cooking easier for all skill levels.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/RecipeMate.png",
+    live: "https://recipemate-bk.netlify.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    tech: ["React", "Tailwind", "GSAP", "API", "Netlify"],
+  },
+  {
+    title: "SafePass - Security Simplified",
+    description: "A secure password manager that stores and organizes login credentials in an encrypted vault. Users can easily view and copy passwords, eliminating the hassle of forgotten logins.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/safepass.png",
+    live: "https://safepassx.netlify.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    tech: ["React", "Tailwind", "GSAP", "MongoDB", "Node.js", "Express.js"],
+  },
+];

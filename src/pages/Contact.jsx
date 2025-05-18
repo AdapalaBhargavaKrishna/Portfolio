@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import Footer from "../components/Footer"
+import Footer from "../pages/Footer"
 
 const Contact = () => {
 

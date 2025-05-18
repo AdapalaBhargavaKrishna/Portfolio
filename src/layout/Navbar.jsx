@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { useWindowScroll } from "react-use";
+import { Link } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom";
 import gsap from "gsap";
 
 
 const NavBar = () => {
 
+  const { hash, pathname } = useLocation();
+  const navigate = useNavigate();
   const navItems = ["Home", "About", "Projects", "Contact"];
 
   const navContainerRef = useRef(null);
@@ -36,6 +40,42 @@ const NavBar = () => {
     });
   }, [isNavVisible]);
 
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [hash])
+
+  useEffect(() => {
+    const onHashChange = () => {
+      const element = document.querySelector(window.location.hash)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+    window.addEventListener("hashchange", onHashChange)
+
+    return () => {
+      window.removeEventListener("hashchange", onHashChange)
+    }
+  }, [])
+
+  const handleNavClick = (e, targetHash) => {
+    e.preventDefault();
+
+    if (pathname === "/" && hash === `#${targetHash.toLowerCase()}`) {
+      const el = document.getElementById(targetHash.toLowerCase());
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+
+      navigate(`/#${targetHash.toLowerCase()}`);
+    }
+  };
+
+
   return (
     <div
       ref={navContainerRef}
@@ -43,25 +83,26 @@ const NavBar = () => {
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-            <a href="#home">
+            <Link to="/#home">
           <div className="flex items-center gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-gray-800 to-gray-900 text-white shadow-lg">
               <span className="font-display text-lg font-bold tracking-wider">BK</span>
             </div>
             <h2 className="text-blue-50 font-bold text-xl">Bhargava Krishna</h2>
           </div>
-            </a>
+            </Link>
           
           <div className="flex h-full items-center">
             <div className="hidden md:block">
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={`#${item.toLowerCase()}`}
+                  to={`#${item.toLowerCase()}`}
                   className="nav-hover-btn"
+                  onClick={(e) => handleNavClick(e, item)}
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

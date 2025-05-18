@@ -1,21 +1,29 @@
-import Navbar from "./components/Navbar"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Navbar from "./layout/Navbar"
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Projects from "./pages/Projects"
+import Project from "./pages/Projects"
+import Projects from "./components/Projects"
 import Contact from "./pages/Contact"
-import Background from "./components/Background"
+import Background from "./layout/Background"
 
 function App() {
-
   return (
-    <>
-    <Background />
+    <Router>
+      <Background />
       <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
-    </>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Home />
+            <About />
+            <Project />
+            <Contact />
+          </>
+        } />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </Router>
   )
 }
 

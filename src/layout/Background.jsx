@@ -31,7 +31,7 @@ function Stars() {
 
 const Background = () => {
   return (
-    <div className="fixed inset-0 z-[-10] bg-gradient-to-b from-[#171717] via-black to-black">
+    <div className="fixed inset-0 z-[-10] bg-gradient-to-b from-black via-black to-black">
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Stars />
       </Canvas>

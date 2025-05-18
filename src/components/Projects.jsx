@@ -1,23 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import linksvg from '../assets/svg/link.svg'
-import arrowsvg from '../assets/svg/arrow.svg'
 import githublogo from '../assets/svg/githubw.svg'
 import { techMap } from '../data/techMap';
 import ProjectCard from '../layout/ProjectCard'
-import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { projectData } from '../data/projects'
+import colsvg from '../assets/svg/horizontal.svg'
+import gridsvg from '../assets/svg/grid.svg'
 
 const Projects = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+  const [isVertical, setIsVertical] = useState(true)
+
+  const { pathname } = useLocation();
+    useEffect(() => {
+       window.scrollTo(0, 0);
+   }, [pathname]);
+
+   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 760 ) {
+        setIsVertical(false);
+      } else {
+        setIsVertical(true)
+      }
+    };
+      handleResize();
+
+      window.addEventListener('resize', handleResize)
+       return () => window.removeEventListener('resize', handleResize);
+   }, [])
+   
 
   return (
-    <div id="projects" className="bg-black min-h-screen text-white px-4 md:px-8 py-16">
+    <div className="bg-black min-h-screen text-white px-4 md:px-8 py-16 pb-40">
       <p className="text-center text-neutral-400 text-sm">From Idea to Interface</p>
       <motion.div
-        className="text-3xl ml-2 md:text-6xl font-bold text-center mb-20 flex items-center justify-center gap-2"
+        className="text-3xl ml-2 md:text-6xl font-bold text-center mb-5 flex items-center justify-center gap-2"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}>
@@ -28,12 +49,23 @@ const Projects = () => {
         </span>
       </motion.div>
 
+      <div className='hidden md:flex flex-wrap items-center gap-4 justify-end md:justify-end w-full md:w-11/12 pr-0 md:pr-5 mx-auto mb-2'>
+  <button onClick={() => setIsVertical(true)} className={`${isVertical ? 'bg-neutral-800 border border-neutral-600 p-2 rounded-xl' : 'p-2'}`}>
+    <img src={colsvg} alt="Vertical layout" className="w-6 h-6" />
+  </button>
+  <button onClick={() => setIsVertical(false)} className={`${!isVertical ? 'bg-neutral-800 border border-neutral-600 p-2 rounded-xl' : 'p-2'}`}>
+    <img src={gridsvg} alt="Grid layout" className="w-6 h-6" />
+  </button>
+</div>
+
+      <hr className='border border-neutral-800 w-11/12 mx-auto mb-20' />
+
       {/* Web */}
-      <div className="hidden md:flex relative gap-10">
+      <div className={`${isVertical ? 'hidden md:flex ' : 'hidden'} relative gap-10`}>
         
         {/* LEFT */}
         <div className="w-full lg:w-3/5 flex flex-col gap-20">
-          {projectData.slice(0, 5).map((project, index) => (
+          {projectData.map((project, index) => (
             <motion.div
               key={index}
               id={`project-${index}`}
@@ -146,16 +178,11 @@ const Projects = () => {
       </div>
 
       {/* Mobile  */}
-      <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 p-1 gap-20">
-      {projectData.slice(0, 5).map((project, index) => (
+      <div className={`${!isVertical ? 'grid ' : 'hidden '} md:mx-44 grid-cols-1 sm:grid-cols-2 p-1 gap-20`}>
+      {projectData.map((project, index) => (
         <ProjectCard key={index} project={project} />
       ))}
     </div>
-      
-      <Link to={'/projects'} className="group flex w-fit items-center justify-center gap-2 group-hover:text-neutral-100 mt-20 mx-auto rounded-full px-2 cursor-pointer">
-       <button class="group relative inline-flex h-[calc(48px+0px)] group-hover:text-black items-center justify-center rounded-full bg-neutral-950 pl-6 pr-12 font-semibold text-lg text-neutral-50"><span class="z-10 pr-2"> see more projects</span><div class="absolute right-2 inline-flex h-10 w-10 items-center justify-end rounded-full bg-white transition-[width] group-hover:w-[calc(100%-8px)]"><div class="mr-[8px] flex items-center justify-center"><img src={arrowsvg} alt="" /></div></div></button>
-       </Link>
-      
     </div>
   );
 };
