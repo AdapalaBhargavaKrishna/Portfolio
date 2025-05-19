@@ -34,6 +34,22 @@
   background-size: cover;
 }
 
+.contact {
+  position: relative;
+  background: url('./assets/images/cbg2.jpg') center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+
 @keyframes marquee-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-100% + 100vw)); }

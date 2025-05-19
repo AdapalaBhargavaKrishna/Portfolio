@@ -13,9 +13,11 @@ import postmanLogo from '../assets/svg/postman.svg';
 import cloudLogo from '../assets/svg/cloud.svg';
 import pythonLogo from '../assets/svg/python.svg';
 import reactjsLogo from '../assets/svg/reactjs.svg';
+import nextjsLogo from '../assets/svg/nextjs.svg';
 import expressjsLogo from '../assets/svg/expressjs.svg';
 import framerLogo from '../assets/svg/framermotion.svg';
 import gsapLogo from '../assets/svg/gsap.svg';
+import flasklogo from '../assets/svg/flask.svg';
 import apilogo from '../assets/svg/api.svg';
 import tailwindLogo from '../assets/svg/tailwind.svg';
 import npmLogo from '../assets/svg/npm.svg';
@@ -53,8 +55,10 @@ export const techMap =  {
   CSS: cssLogo,
   JavaScript: javascriptLogo,
   React: reactjsLogo,
+  NextJS: nextjsLogo,
   'Node.js': nodeLogo,
   'Express.js': expressjsLogo,
+  'Flask': flasklogo,
   Python: pythonLogo,
   Java: javaLogo,
   Tailwind: tailwindLogo,

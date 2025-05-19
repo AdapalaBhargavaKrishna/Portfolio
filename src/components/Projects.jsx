@@ -43,7 +43,7 @@ const Projects = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}>
         <span className="text-white">Code &</span>
-        <span className="project-heading inline-block mt-3 bg-gradient-to-r from-[#ff8000] via-[#f0c] to-[#04f] bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
+        <span className="project-heading inline-block mt-1 md:mt-3 bg-gradient-to-r from-[#ff8000] via-[#f0c] to-[#04f] bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
           style={{ backgroundSize: "200% 200%" }}>
           Creativity
         </span>
@@ -81,7 +81,7 @@ const Projects = () => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 style={{
-                  transform: `perspective(1000px) rotateY(${isHovered ? '2deg' : '0deg'}) rotateX(${isHovered ? '-2deg' : '0deg'})`,
+                  transform: `perspective(800px) rotateY(${isHovered ? '2deg' : '0deg'}) rotateX(${isHovered ? '-2deg' : '0deg'})`,
                   transition: 'transform 0.5s ease-out',
                   boxShadow: isHovered
                     ? '0 50px 100px -20px rgba(0, 0, 0, 0.3), 0 30px 60px -30px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(123, 31, 162, 0.2)'

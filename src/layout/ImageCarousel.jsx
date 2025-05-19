@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import image1 from '../assets/image1.jpg';
-import image2 from '../assets/image2.jpg';
-import image3 from '../assets/image3.jpg';
+import travel from '../assets/images/travel.jpg';
+import code from '../assets/images/code.jpg';
+import lift from '../assets/images/gym.avif';
 
 const images = [
-  { src: image1, caption: 'I Lift' },
-  { src: image2, caption: 'I Code' },
-  { src: image3, caption: 'I Build' },
+  { src: travel, caption: 'I Travel' },
+  { src: code, caption: 'I Code' },
+  { src: lift, caption: 'I Lift' },
 ];
 
 export default function ImageCarousel() {
@@ -25,17 +25,17 @@ export default function ImageCarousel() {
     const offset = (index - activeIndex + images.length) % images.length;
 
     switch (offset) {
-      case 0: // Center
+      case 0:
         return {
           className: 'z-30 scale-105 rotate-0',
           translate: 'translate-x-0'
         };
-      case 1: // Right
+      case 1:
         return {
           className: 'z-20 rotate-[10deg] opacity-70',
           translate: 'translate-x-10'
         };
-      case 2: // Left
+      case 2:
         return {
           className: 'z-20 -rotate-[10deg] opacity-70',
           translate: '-translate-x-10'
@@ -50,7 +50,7 @@ export default function ImageCarousel() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      {/* Image Carousel */}
+
       <div className="relative flex items-center justify-center h-[400px] w-full">
         {images.map((img, index) => {
           const { className, translate } = getTransformStyle(index);

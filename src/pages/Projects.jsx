@@ -11,7 +11,6 @@ import { projectData } from '../data/projects'
 const Projects = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
 
   return (
     <div id="projects" className="bg-black min-h-screen text-white px-4 md:px-8 py-16">
@@ -153,7 +152,7 @@ const Projects = () => {
     </div>
       
       <Link to={'/projects'} className="group flex w-fit items-center justify-center gap-2 group-hover:text-neutral-100 mt-20 mx-auto rounded-full px-2 cursor-pointer">
-       <button class="group relative inline-flex h-[calc(48px+0px)] group-hover:text-black items-center justify-center rounded-full bg-neutral-950 pl-6 pr-12 font-semibold text-lg text-neutral-50"><span class="z-10 pr-2"> see more projects</span><div class="absolute right-2 inline-flex h-10 w-10 items-center justify-end rounded-full bg-white transition-[width] group-hover:w-[calc(100%-8px)]"><div class="mr-[8px] flex items-center justify-center"><img src={arrowsvg} alt="" /></div></div></button>
+       <button className="group relative inline-flex h-[calc(48px+0px)] group-hover:text-black items-center justify-center rounded-full bg-neutral-950 pl-6 pr-12 font-semibold text-lg text-neutral-50"><span className="z-10 pr-2"> see more projects</span><div className="absolute right-2 inline-flex h-10 w-10 items-center justify-end rounded-full bg-white transition-[width] group-hover:w-[calc(100%-8px)]"><div className="mr-[8px] flex items-center justify-center"><img src={arrowsvg} alt="" /></div></div></button>
        </Link>
       
     </div>
