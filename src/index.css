@@ -6,9 +6,9 @@
     scrollbar-width: none;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 @layer utilities { 
     .nav-hover-btn {
@@ -33,10 +33,9 @@
   background: url('./assets/svg/bg.svg') no-repeat center center ;
   background-size: cover;
 }
-
 .contact {
   position: relative;
-  background: url('./assets/images/cbg2.jpg') center;
+  background: url('./assets/images/image.png') center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -45,7 +44,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.9) 30%,
+    rgba(0, 0, 0, 0.9) 70%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
   z-index: 1;
 }
 
