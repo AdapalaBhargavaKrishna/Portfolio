@@ -99,9 +99,10 @@ const Projects = () => {
               {projectData[currentIndex].tech?.map((tech, i) => (
                 <motion.div
                   key={`${tech}-${i}`}
-                  className="flex items-center gap-2 px-3 py-1 bg-[#111] border border-[#2a2a2a] rounded-3xl"
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  className="flex items-center gap-2 px-4 py-2 bg-neutral-900 border border-neutral-700 rounded-xl cursor-pointer"
+                  initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
+                  whileHover={{scale: 1.1}}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
                 >
                   <img src={techMap[tech]} alt={tech} className="w-5 h-5" />

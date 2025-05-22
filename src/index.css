@@ -6,7 +6,7 @@
     scrollbar-width: none;
 }
 
-#home, #contact, #projects, #about {
+#contact, #projects, #about {
   scroll-behavior: smooth;
 }
 

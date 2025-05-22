@@ -31,10 +31,11 @@ const TechStack = () => {
           >
             {row.map((tech, index) => (
               <motion.div
-                initial={{ opacity: 0, scale: 0.9, }}
-                whileInView={{ opacity: 1, scale: 1,}}
+                initial={{ opacity: 0, scale: 0}}
+                whileInView={{ opacity: 1, scale: 1}}
+                whileHover={{scale: 1.1}}
                 transition={{
-                  duration: 0.6,
+                  duration: 0.1,
                   ease: "easeOut",
                   delay: index * 0.1,
                 }}

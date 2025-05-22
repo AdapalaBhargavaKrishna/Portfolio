@@ -21,16 +21,14 @@ const ProjectCard = ({ project }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
 
-      {/* Image container */}
       <div className="w-full h-64 md:h-80 overflow-hidden rounded-t-2xl">
         <img
           src={image}
           alt={`${title} screenshot`}
-          className="w-full h-full object-fit object-center transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-fit object-center transition-transform duration-700 group-hover:scale-105"
         />
       </div>
 
-      {/* Content */}
       <div className="flex flex-col flex-grow p-4 gap-4">
         <h3 className="text-xl font-bold text-gray-100">{title}</h3>
 

@@ -1,12 +1,15 @@
 import React from 'react'
-import Footer from './Footer'
+import githublogo from '../assets/svg/github.svg';
+import linkedinlogo from '../assets/svg/linkedin.svg';
+import xlogo from '../assets/svg/x.svg';
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom';
+
 
 const Contact = () => {
   return (
     <>
       <div
-        id="contact"
         className="relative min-h-[91vh] flex flex-col justify-center items-center text-white contact px-4 py-16 overflow-hidden"
       >
         <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-b from-black/90 via-black/10 to-black/90"></div>
@@ -16,21 +19,21 @@ const Contact = () => {
             className="mb-16 text-center"
           >
             <motion.h1
-             initial={{ opacity: 0, x: -300 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
-            className="text-4xl md:text-6xl font-bold mb-6">
+              initial={{ opacity: 0, x: -300 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false }}
+              className="text-4xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
                 Let’s Connect & Create Impact
               </span>
             </motion.h1>
-            <motion.p 
-            initial={{ opacity: 0, x: 300 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
-            className="text-base md:text-xl text-gray-300 max-w-4xl mx-auto">Always open to meaningful connections in software engineering, product development, or tech. If you’re a developer, recruiter, or tech enthusiast, feel free to reach out.
+            <motion.p
+              initial={{ opacity: 0, x: 300 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false }}
+              className="text-base md:text-xl text-gray-300 max-w-4xl mx-auto">Always open to meaningful connections in software engineering, product development, or tech. If you’re a developer, recruiter, or tech enthusiast, feel free to reach out.
             </motion.p>
 
           </motion.div>
@@ -40,7 +43,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: false,amount: 0.4 }}
+              viewport={{ once: false, amount: 0.4 }}
               className="hidden md:block relative w-96"
             >
               <div className="sticky top-24 space-y-8">
@@ -122,7 +125,7 @@ const Contact = () => {
                         placeholder="Name"
                         required
                       />
-                      
+
                     </div>
                     <div className="relative">
                       <input
@@ -131,7 +134,7 @@ const Contact = () => {
                         placeholder="Email"
                         required
                       />
-                      
+
                     </div>
                   </div>
 
@@ -141,7 +144,7 @@ const Contact = () => {
                       className="w-full bg-black/20 border-0 border-b-2 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent peer"
                       placeholder="phone number(optional)"
                     />
-                    
+
                   </div>
 
                   <div className="relative">
@@ -151,7 +154,7 @@ const Contact = () => {
                       placeholder="Message"
                       required
                     ></textarea>
-                   
+
                   </div>
 
                   <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl w-full border border-neutral-800 px-6 font-medium text-neutral-200"><span>Send Message</span><div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"><div class="relative h-full w-8 bg-white/20"></div></div></button>
@@ -163,7 +166,59 @@ const Contact = () => {
         </div>
       </div>
 
-      <Footer className="relative z-10 pointer-events-auto" />
+      <div className='min-h-max md:min-h-[25vh] bg-black md:pb-0 pb-16 relative z-50'>
+        <div className='mx-auto w-full md:w-[70%] px-4 md:px-0'>
+          <div className='flex md:flex-row flex-col md:justify-between'>
+
+            <div className='md:w-1/2'>
+              <div className='mb-2'>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white shadow-lg mb-2 md:mb-4">
+                  <span className="text-xl font-extrabold tracking-wider">BK</span>
+                </div>
+                <p className='w-60 text-sm text-neutral-300'>I'm Bhargava Krishna - a Computer Science student & problem solver. Thanks for checking out my site!</p>
+              </div>
+
+              <div className='md:w-[91%] flex justify-between mb-5'>
+                <p className=' text-neutral-400 text-sm my-5'>© 2025 Bhargava Krishna</p>
+                <p className=' text-neutral-400 text-sm my-5 hover:underline'>bk.adapala@gmail.com</p>
+              </div>
+            </div>
+
+            <div className='flex md:mx-0 gap-[50%] md:gap-40'>
+
+              <div>
+                <h1 className='font-semibold text-white text-lg mb-2'>General</h1>
+                <ul className='text-neutral-300 space-y-2'>
+                  <li><Link to={"/#home"} className="cursor-pointer hover:underline">Home</Link></li>
+                  <li><Link to={"/#about"} className="cursor-pointer hover:underline">About</Link></li>
+                  <li><Link to={"/#projects"} className="cursor-pointer hover:underline">Projects</Link></li>
+                  <li><Link to={"/#contact"} className="cursor-pointer hover:underline">Contact</Link></li>
+                </ul>
+              </div>
+
+              <div className='flex flex-col items-center gap-4'>
+                <h1 className='font-semibold text-white text-lg mb-1'>Links</h1>
+                <ul className='text-neutral-300 flex gap-4 mb-4'>
+                  <li><a href="https://github.com/AdapalaBhargavaKrishna" target='_blank'><img src={githublogo} alt="" className="invert" /></a></li>
+                  <li><a href="https://www.linkedin.com/in/bhargavakrishnaadapala/ " target='_blank'><img src={linkedinlogo} alt="" className="invert" /></a></li>
+                  <li><a href="https://x.com/Bhargava383755" target='_blank'><img src={xlogo} alt="" className="invert" /></a></li>
+                </ul>
+                <a href="/path/to/your_resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="group flex items-center gap-2 h-12 bg-blue-50/95 border border-blue-100 px-6 font-medium text-blue-600 rounded-xl hover:bg-blue-50 shadow-2xl"
+                  >
+                    <span>Resume</span>
+                  </motion.button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
     </>
   )
 }

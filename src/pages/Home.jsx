@@ -20,7 +20,7 @@ const Home = () => {
 
 
   const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.8]);
-  const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.07], [1, 0]);
 
   const roles = [
     'Web Developer',
