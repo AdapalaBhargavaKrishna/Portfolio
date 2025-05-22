@@ -6,7 +6,7 @@
     scrollbar-width: none;
 }
 
-html {
+#home, #contact, #projects, #about {
   scroll-behavior: smooth;
 }
 
@@ -35,7 +35,7 @@ html {
 }
 .contact {
   position: relative;
-  background: url('./assets/images/image.png') center;
+  background: url('./assets/images/contactbg.png') center;
   background-size: cover;
   background-repeat: no-repeat;
 }

@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import githublogo from '../assets/svg/github.svg';
 import linkedinlogo from '../assets/svg/linkedin.svg';
 import xlogo from '../assets/svg/x.svg';
-import downloadlogo from '../assets/svg/download.svg';
 import ImageCarousel from '../layout/ImageCarousel'
 import TechStack from '../layout/TechStack'
 
@@ -92,7 +91,6 @@ const About = () => {
                       className="group flex items-center gap-2 h-12 bg-blue-50 border border-blue-100 px-6 font-medium text-blue-600 rounded-xl hover:bg-blue-100 shadow-2xl"
                     >
                       <span>Resume</span>
-                      <img src={downloadlogo} alt="Download" className="w-5 h-5 transition-transform group-hover:translate-y-1" />
                     </motion.button>
                   </a>
                 </div>

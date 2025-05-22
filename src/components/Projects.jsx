@@ -9,6 +9,7 @@ import { projectData } from '../data/projects'
 import colsvg from '../assets/svg/horizontal.svg'
 import gridsvg from '../assets/svg/grid.svg'
 
+
 const Projects = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,6 +36,7 @@ const Projects = () => {
    
 
   return (
+    <>
     <div className="bg-black min-h-screen text-white px-4 md:px-8 py-16 pb-[15%]">
       <p className="text-center text-neutral-400 text-sm">From Idea to Interface</p>
       <motion.div
@@ -184,6 +186,7 @@ const Projects = () => {
       ))}
     </div>
     </div>
+    </>
   );
 };
 
