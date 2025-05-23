@@ -1,14 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react'
 import githublogo from '../assets/svg/github.svg';
 import linkedinlogo from '../assets/svg/linkedin.svg';
 import xlogo from '../assets/svg/x.svg';
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom';
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Contact = () => {
+
+  const now = new Date();
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    date: now.toLocaleDateString(),
+    time: now.toLocaleTimeString(),
+  });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    toast.promise(
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY),
+      {
+      loading: 'Sending message...',
+      success: 'Message sent successfully! 🎉',
+      error: 'Failed to send message. Please try again.',
+    }
+    )
+      .then(
+        (result) => {     
+          console.log(result.text);
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+            date: now.toLocaleDateString(),
+            time: now.toLocaleTimeString(),
+          })
+        }
+      );
+  };
+
   return (
     <>
+       <Toaster position="top-right" />
       <div
         className="relative min-h-[91vh] flex flex-col justify-center items-center text-white contact px-4 py-16 overflow-hidden"
       >
@@ -116,16 +160,16 @@ const Contact = () => {
                 </h2>
                 <p className="text-gray-400 mb-8">Fill out the form below and I'll get back to you soon.</p>
 
-                <div className="space-y-6">
+                <form onSubmit={sendEmail} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="relative">
                       <input
                         type="text"
                         className="w-full bg-black/20 border-0 border-b-2 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent peer"
                         placeholder="Name"
-                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       />
-
                     </div>
                     <div className="relative">
                       <input
@@ -133,18 +177,20 @@ const Contact = () => {
                         className="w-full bg-black/20 border-0 border-b-2 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent peer"
                         placeholder="Email"
                         required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
-
                     </div>
                   </div>
 
                   <div className="relative">
                     <input
-                      type="text"
+                      type="number"
                       className="w-full bg-black/20 border-0 border-b-2 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent peer"
-                      placeholder="phone number(optional)"
+                      placeholder="Phone number (optional)"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
-
                   </div>
 
                   <div className="relative">
@@ -153,12 +199,22 @@ const Contact = () => {
                       className="w-full bg-black/20 border-0 border-b-2 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent peer resize-none"
                       placeholder="Message"
                       required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     ></textarea>
-
                   </div>
 
-                  <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl w-full border border-neutral-800 px-6 font-medium text-neutral-200"><span>Send Message</span><div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"><div class="relative h-full w-8 bg-white/20"></div></div></button>
-                </div>
+                  <button
+                    type="submit"
+                    className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl w-full border border-neutral-800 px-6 font-medium text-neutral-200"
+                  >
+                    <span>Send Message</span>
+                    <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                      <div className="relative h-full w-8 bg-white/20"></div>
+                    </div>
+                  </button>
+                </form>
+
               </div>
             </motion.div>
           </div>
