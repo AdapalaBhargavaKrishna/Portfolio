@@ -6,79 +6,75 @@ const Home = () => {
   const [disablePointerEvents, setDisablePointerEvents] = useState(false);
   const { scrollYProgress } = useScroll();
 
-  useEffect(() => {
-  const unsubscribe = scrollYProgress.on("change", (v) => {
-    if (v < 0.14) {
-      setDisablePointerEvents(false);
-    } else {
-      setDisablePointerEvents(true);
-    }
-  });
-
-  return () => unsubscribe();
-}, [scrollYProgress]);
-
-
-  const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.8]);
-  const opacity = useTransform(scrollYProgress, [0, 0.07], [1, 0]);
-
   const roles = [
     'Web Developer',
     'UI/UX Enthusiast',
     'Problem Solver',
     'Python Programmer',
-    'Tech Explorer'
+    'Tech Explorer',
   ];
 
   useEffect(() => {
+    const unsubscribe = scrollYProgress.on('change', (v) => {
+      setDisablePointerEvents(v >= 0.14);
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
-      setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
 
+  const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.85]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
+
   return (
     <div id="home" className="relative h-screen w-full">
-
       <div className="fixed inset-0 z-0">
-
         <motion.div
-          style={{
-            scale,
-            opacity,
-            position: 'relative',
-            height: '100vh',
-          }}
+          style={{ scale, opacity, position: 'relative', height: '100vh' }}
           className={`flex items-center justify-center w-full text-white ${
-    disablePointerEvents ? 'pointer-events-none' : ''
-  }`}
+            disablePointerEvents ? 'pointer-events-none' : ''
+          }`}
         >
-          <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center text-center w-full px-4 md:px-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-5 flex flex-col items-center p-6 md:p-20 mb-16"
+              transition={{ duration: 0.8 }}
+              className="space-y-6 mb-20"
             >
-              <div className="hidden px-4 rounded-full bg-gradient-to-r from-gray-500/10 to-gray-500/10 border border-gray-700">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                  <span className='inline-flex animate-background-shine bg-[linear-gradient(110deg,#d9d9d9,45%,#1e293b,55%,#d9d9d9)] bg-[length:250%_100%] bg-clip-text text-md  font-semibold text-transparent'>Open to work</span>
-                </div>
+              {/* Notification badge */}
+              <div className="inline-flex items-center px-4 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-sm">
+                <span className="text-xs font-medium bg-gradient-to-tr from-blue-400 to-blue-600 text-white px-2 py-0.5 rounded-full mr-2">
+                  New
+                </span>
+                <a
+                  href="https://newzzx.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-gray-300 hover:underline transition"
+                >
+                  View my latest project <span className="text-white font-semibold">NewzX</span> →
+                </a>
               </div>
 
-              <div className="inline-block px-2 py-1 rounded-full bg-gradient-to-r from-gray-500/10 to-gray-500/10 border border-gray-700">
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#2c83ff,45%,#549aff,55%,#2c83ff)] bg-[length:250%_100%] px-2 py-1 rounded-xl text-xs font-medium text-white">New!</span>
-                  <a href="https://newzzx.netlify.app/" target="_blank" className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#d9d9d9,45%,#1e293b,55%,#d9d9d9)] bg-[length:250%_100%] bg-clip-text text-md font-semibold text-transparent hover:underline">View my latest project NewzX →</a>
-                </div>
-              </div>
-
-              <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
-                Hello! I'm <span className="text-rose-400">Bhargava</span>
+              {/* Headline */}
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                I’m{' '}
+                <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+                  Bhargava
+                </span>
+                <br />
+                turning ideas into{' '}
+                <span className="italic text-gray-300">digital experiences</span>
               </h1>
 
-              <div className="h-16 flex items-center justify-center">
+              {/* Animated Role */}
+              <div className="h-12 overflow-hidden flex justify-center items-center mt-1">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={roleIndex}
@@ -86,24 +82,40 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent flex items-center"
+                    className="text-xl md:text-2xl font-medium text-white"
                   >
-                    <span>&lt;</span>
-                    <span className="mx-2">{roles[roleIndex]}</span>
-                    <span>/&gt;</span>
+                    {roles[roleIndex]}
                   </motion.div>
                 </AnimatePresence>
               </div>
 
-              <p className="md:text-xl text-base text-gray-50 max-w-5xl text-center">
-                I design and develop responsive, high-performance web applications with a focus on clean UI and intuitive UX. Always exploring new technologies, I love transforming ideas into impactful digital solutions.
+              {/* Description */}
+              <p className="max-w-3xl mx-auto text-gray-400 text-sm md:text-lg leading-relaxed">
+                Passionate about crafting responsive, performant, and aesthetic web apps with a
+                strong UX focus. I thrive at the intersection of creativity and code, turning bold
+                concepts into seamless interfaces.
               </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+                <a
+                  href="#projects"
+                  className="px-6 py-2 text-sm md:text-base bg-white text-black rounded-full shadow-md hover:bg-transparent hover:text-white hover:border hover:border-white transition-all duration-200"
+                >
+                  Explore My Work
+                </a>
+                <a
+                  href="#contact"
+                  className="px-6 py-2 text-sm md:text-base bg-white text-black rounded-full shadow-md hover:bg-transparent hover:text-white hover:border hover:border-white transition-all duration-200"
+                >
+                  Get In Touch
+                </a>
+              </div>
             </motion.div>
           </div>
         </motion.div>
       </div>
     </div>
-
   );
 };
 

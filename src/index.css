@@ -21,7 +21,7 @@
   }
 
   #home{
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
   }
 
 .about-background {
@@ -78,4 +78,8 @@
 
 .project-heading {
     font-family: "NyghtSerif", "NyghtSerif Fallback";
+}
+
+.font-cursive{
+  font-family: "NyghtSerif", "NyghtSerif Fallback";
 }
