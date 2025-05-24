@@ -75,7 +75,7 @@ const About = () => {
                       <img src={linkedinlogo} alt="LinkedIn" className="w-6 h-6" />
                     </motion.button>
                   </a>
-                  <a href="https://x.com/Bhargava383755" target="_blank" rel="noopener noreferrer">
+                  <a href="https://x.com/Bhargava1028" target="_blank" rel="noopener noreferrer">
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
@@ -84,7 +84,7 @@ const About = () => {
                       <img src={xlogo} alt="X" className="w-6 h-6" />
                     </motion.button>
                   </a>
-                  <a href="/path/to/your_resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <a  href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

@@ -115,7 +115,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm text-gray-400">Phone</p>
-                        <p className="text-gray-200">+91 9390244436</p>
+                        <p className="text-gray-200">+91 93902 44436</p>
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -185,7 +185,7 @@ const Contact = () => {
 
                   <div className="relative">
                     <input
-                      type="number"
+                      type="tel"
                       className="w-full bg-black/20 border-0 border-b-2 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent peer"
                       placeholder="Phone number (optional)"
                       value={formData.phone}
@@ -257,9 +257,9 @@ const Contact = () => {
                 <ul className='text-neutral-300 flex gap-4 mb-4'>
                   <li><a href="https://github.com/AdapalaBhargavaKrishna" target='_blank'><img src={githublogo} alt="" className="invert" /></a></li>
                   <li><a href="https://www.linkedin.com/in/bhargavakrishnaadapala/ " target='_blank'><img src={linkedinlogo} alt="" className="invert" /></a></li>
-                  <li><a href="https://x.com/Bhargava383755" target='_blank'><img src={xlogo} alt="" className="invert" /></a></li>
+                  <li><a href="https://x.com/Bhargava1028" target='_blank'><img src={xlogo} alt="" className="invert" /></a></li>
                 </ul>
-                <a href="/path/to/your_resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a  href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

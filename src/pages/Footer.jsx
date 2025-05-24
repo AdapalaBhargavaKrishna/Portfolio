@@ -41,9 +41,9 @@ const Footer = () => {
               <ul className='text-neutral-300 flex gap-4 mb-4'>
                 <li><a href="https://github.com/AdapalaBhargavaKrishna" target='_blank'><img src={githublogo} alt="" className="invert" /></a></li>
                 <li><a href="https://www.linkedin.com/in/bhargavakrishnaadapala/ " target='_blank'><img src={linkedinlogo} alt="" className="invert" /></a></li>
-                <li><a href="https://x.com/Bhargava383755" target='_blank'><img src={xlogo} alt="" className="invert" /></a></li>
+                <li><a href="https://x.com/Bhargava1028" target='_blank'><img src={xlogo} alt="" className="invert" /></a></li>
               </ul>
-              <a href="/path/to/your_resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a  href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
