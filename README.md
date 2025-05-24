@@ -1,12 +1,29 @@
-# React + Vite
+# 🧑‍💻 Bhargava's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio! 🚀  
+This portfolio showcases my projects, skills, and experience as a full-stack web developer. Built with cutting-edge technologies and animated with powerful libraries, it’s designed to make a lasting impression.
 
-Currently, two official plugins are available:
+## 🌐 Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Visit My Portfolio]([https://your-portfolio-link.com](https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/#home))
 
-## Expanding the ESLint configuration
+## ⚙️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, Tailwind CSS
+- **Animations:** Framer Motion, GSAP, Anime.js
+- **Tools & Libraries:** React Icons, React Router, EmailJS, Vite
+- **Design:** Responsive UI, Dark/Light Mode Toggle, 3D & Abstract Animated Shapes
+
+## ✨ Features
+
+- 🔥 Smooth animations and transitions  
+- 🌙 Light/Dark mode toggle  
+- 📱 Fully responsive layout  
+- 🛠️ Modular and reusable components  
+- 📂 Projects section with live links and GitHub repositories  
+- 📫 Contact form with EmailJS integration  
+- 🎨 Beautiful radial background effects and motion text  
+
+## 📸 Preview
+
+![Portfolio Preview](https://cdni.iconscout.com/illustration/premium/thumb/portfolio-illustration-download-in-svg-png-gif-file-formats--briefcase-bag-business-office-illustrations-1519810.png?f=webp)
