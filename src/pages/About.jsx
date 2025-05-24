@@ -53,7 +53,7 @@ const About = () => {
               transition={{ delay: 0.3 }}
               className="backdrop-blur-sm p-6 rounded-3xl shadow-2xl max-w-2xl border border-white/20 mt-10 md:mt-0">
               <div className="flex flex-col items-center justify-between gap-6">
-                <h2 className="text-2xl font-semibold text-center text-black">
+                <h2 className="text-2xl font-semibold text-center text-white md:text-black">
                   Let's Connect
                 </h2>
                 <div className="flex justify-center items-center gap-4">

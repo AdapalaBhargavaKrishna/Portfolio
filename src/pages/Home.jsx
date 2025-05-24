@@ -27,7 +27,6 @@ const Home = () => {
     'UI/UX Enthusiast',
     'Problem Solver',
     'Python Programmer',
-    'Creative Thinker',
     'Tech Explorer'
   ];
 
@@ -59,7 +58,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-5 flex flex-col items-center p-6 md:p-20"
+              className="space-y-5 flex flex-col items-center p-6 md:p-20 mb-16"
             >
               <div className="hidden px-4 rounded-full bg-gradient-to-r from-gray-500/10 to-gray-500/10 border border-gray-700">
                 <div className="flex items-center gap-2">
@@ -96,7 +95,7 @@ const Home = () => {
                 </AnimatePresence>
               </div>
 
-              <p className="md:text-xl text-lg text-gray-50 max-w-5xl text-center">
+              <p className="md:text-xl text-base text-gray-50 max-w-5xl text-center">
                 I design and develop responsive, high-performance web applications with a focus on clean UI and intuitive UX. Always exploring new technologies, I love transforming ideas into impactful digital solutions.
               </p>
             </motion.div>

@@ -104,7 +104,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm text-gray-400">Email</p>
-                        <p className="text-gray-200">bk.adapala@gmail.com</p>
+                        <a href="mailto:bk.adapala@gmail.com" className="text-gray-200 hover:underline">bk.adapala@gmail.com</a>
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -236,7 +236,7 @@ const Contact = () => {
 
               <div className='md:w-[91%] flex justify-between mb-5'>
                 <p className=' text-neutral-400 text-sm my-5'>© 2025 Bhargava Krishna</p>
-                <p className=' text-neutral-400 text-sm my-5 hover:underline'>bk.adapala@gmail.com</p>
+                <a href="mailto:bk.adapala@gmail.com" className="text-neutral-400 text-sm my-5 hover:underline">bk.adapala@gmail.com</a>
               </div>
             </div>
 

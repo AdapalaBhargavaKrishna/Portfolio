@@ -20,8 +20,8 @@ const Footer = () => {
           
         <div className='md:w-[91%] flex justify-between mb-5'>
           <p className=' text-neutral-400 text-sm my-5'>© 2025 Bhargava Krishna</p>
-          <p className=' text-neutral-400 text-sm my-5 hover:underline'>bk.adapala@gmail.com</p>
-        </div>
+          <a href="mailto:bk.adapala@gmail.com" className="text-neutral-400 text-sm my-5 hover:underline">bk.adapala@gmail.com</a>  
+          </div>
         </div>
 
           <div className='flex md:mx-0 gap-[50%] md:gap-40'>
