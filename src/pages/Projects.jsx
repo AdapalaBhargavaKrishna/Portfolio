@@ -16,12 +16,12 @@ const Projects = () => {
     <div id="projects" className="bg-black min-h-screen text-white px-4 md:px-8 py-16">
       <p className="text-center text-neutral-400 text-sm">From Idea to Interface</p>
       <motion.div
-        className="text-3xl ml-2 md:text-6xl font-bold text-center mb-20 flex items-center justify-center gap-2"
+        className="text-4xl ml-2 mt-2 md:text-6xl font-bold text-center mb-20 flex items-center justify-center gap-2"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}>
         <span className="text-white">Code &</span>
-        <span className="project-heading inline-block mt-3 bg-gradient-to-r from-[#ff8000] via-[#f0c] to-[#04f] bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
+        <span className="project-heading inline-block mt-1 md:mt-3 bg-gradient-to-r from-[#ff8000] via-[#f0c] to-[#04f] bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
           style={{ backgroundSize: "200% 200%" }}>
           Creativity
         </span>

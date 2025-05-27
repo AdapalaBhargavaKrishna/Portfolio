@@ -3,9 +3,22 @@ import githublogo from '../assets/svg/github.svg';
 import linkedinlogo from '../assets/svg/linkedin.svg';
 import xlogo from '../assets/svg/x.svg';
 import { motion } from 'framer-motion'
+import toast, { Toaster } from 'react-hot-toast';
 
 const Footer = () => {
+
+  const copyText = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success('Copied to clipboard!');
+    } catch (error) {
+      toast.error('Failed to copy!');
+    }
+  };
+
   return (
+    <>
+    
     <div className='min-h-max md:min-h-[25vh] bg-black md:pb-0 pb-16 relative z-50'>
       <div className='mx-auto w-full md:w-[70%] px-4 md:px-0'>
         <div className='flex md:flex-row flex-col md:justify-between'>
@@ -20,7 +33,7 @@ const Footer = () => {
           
         <div className='md:w-[91%] flex justify-between mb-5'>
           <p className=' text-neutral-400 text-sm my-5'>© 2025 Bhargava Krishna</p>
-          <a href="mailto:bk.adapala@gmail.com" className="text-neutral-400 text-sm my-5 hover:underline">bk.adapala@gmail.com</a>  
+          <a href="mailto:bk.adapala@gmail.com" onClick={() => copyText('bk.adapala@gmail.com')} className="text-neutral-400 text-sm my-5 hover:underline">bk.adapala@gmail.com</a>  
           </div>
         </div>
 
@@ -59,6 +72,7 @@ const Footer = () => {
         
       </div>
     </div>
+    </>
   )
 }
 

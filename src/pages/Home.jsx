@@ -44,22 +44,22 @@ const Home = () => {
         className={`relative flex items-center justify-center h-full text-white transition-all duration-300 ease-out ${disablePointerEvents ? 'pointer-events-none' : ''
           }`}
       >
-        <div className="flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-24 w-full">
+        <div className="flex flex-col items-center justify-center text-center px-6 md:px-12 mb-28 w-full">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-8 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-1 inline-flex items-center"
+            className="mb-8 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-2 md:px-4 py-1 inline-flex items-center"
           >
-            <span className="text-xs font-semibold bg-gradient-to-tr bg-blue-500 text-white rounded-full px-2 py-0.5 mr-2">
+            <span className="text-xs font-semibold bg-gradient-to-tr bg-blue-500 text-white rounded-full px-2 md:py-0.5 mr-2">
               New
             </span>
             <a
               href="https://newzzx.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-gray-200 hover:underline"
+              className="text-xs md:text-sm text-gray-200 hover:underline"
             >
               Check out my latest creation{' '}
               <span className="text-white font-semibold">NewzX</span> →
@@ -70,7 +70,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight max-w-5xl tracking-tight"
+            className="text-[2rem] md:text-6xl font-bold leading-tight max-w-5xl tracking-tight"
           >
             Hello, I'm{' '}
             <motion.span
@@ -96,17 +96,17 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="text-2xl md:text-2xl font-medium text-white"
+                className="text-2xl md:text-2xl font-medium bg-gradient-to-r bg-clip-text text-transparent from-[#a7f3d0] via-[#67e8f9] to-[#93c5fd]"
               >
                 {'<'} {roles[roleIndex]} {'/>'}
               </motion.div>
             </AnimatePresence>
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 flex flex-col md:flex-row gap-5 items-center justify-center">
 
             <a href="#projects">
-            <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full border border-neutral-700 bg-black px-6 font-medium text-white duration-500">
+            <button className="hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group relative inline-flex h-10 md:h-12 items-center justify-center overflow-hidden rounded-full border border-neutral-700 bg-black px-4 md:px-6 font-medium text-white duration-500">
               <div className="translate-y-0 opacity-100 transition group-hover:-translate-y-[150%] group-hover:opacity-0">
                 Explore my work
               </div>
@@ -116,7 +116,7 @@ const Home = () => {
             </button>
             </a>  
             <a href="#contact"> 
-            <button className="group relative inline-flex h-12 items-center justify-center rounded-full px-6 bg-white font-medium text-black">
+            <button className="hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group relative inline-flex h-10 md:12 items-center justify-center rounded-full px-4 md:px-6 bg-white font-medium text-black">
               <span>Lets Connect</span>
               <div className="relative ml-1 h-5 w-5 overflow-hidden">
                 <div className="absolute transition-all duration-200 group-hover:-translate-y-5 group-hover:translate-x-4">
@@ -156,14 +156,6 @@ const Home = () => {
             </button>
             </a>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-          >
-
-          </motion.div>
         </div>
       </motion.div>
     </div>

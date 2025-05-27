@@ -30,13 +30,13 @@ const Contact = () => {
     toast.promise(
       emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY),
       {
-      loading: 'Sending message...',
-      success: 'Message sent successfully! 🎉',
-      error: 'Failed to send message. Please try again.',
-    }
+        loading: 'Sending message...',
+        success: 'Message sent successfully! 🎉',
+        error: 'Failed to send message. Please try again.',
+      }
     )
       .then(
-        (result) => {     
+        (result) => {
           console.log(result.text);
           setFormData({
             name: "",
@@ -50,9 +50,27 @@ const Contact = () => {
       );
   };
 
+  const copyText = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success('Copied to clipboard!');
+    } catch (error) {
+      toast.error('Failed to copy!');
+    }
+  };
+
   return (
     <>
-       <Toaster position="top-right" />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            marginTop: '10px',
+            marginRight: '20px',
+          }
+        }}
+      />
+
       <div
         className="relative min-h-[91vh] flex flex-col justify-center items-center text-white contact px-4 py-16 overflow-hidden"
       >
@@ -104,7 +122,29 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm text-gray-400">Email</p>
-                        <a href="mailto:bk.adapala@gmail.com" className="text-gray-200 hover:underline">bk.adapala@gmail.com</a>
+                        <div className='flex items-center gap-2'>
+
+                          <a
+                            href="mailto:bk.adapala@gmail.com"
+                            className="text-gray-200 hover:underline cursor-pointer"
+                          >
+                            bk.adapala@gmail.com
+                          </a>
+                          <div
+                            className="inline-block mt-1 cursor-pointer"
+                            onClick={() => copyText('bk.adapala@gmail.com')}
+                            aria-label="Copy email to clipboard"
+                            title="Click to copy email"
+                          >
+                            <lord-icon
+                              colors="primary:#ffffff,secondary:#ffffff"
+                              style={{ width: '25px', height: '25px', paddingTop: '3px', paddingLeft: '3px' }}
+                              src="https://cdn.lordicon.com/iykgtsbt.json"
+                              trigger="hover"
+                            />
+                          </div>
+                        </div>
+
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -236,7 +276,7 @@ const Contact = () => {
 
               <div className='md:w-[91%] flex justify-between mb-5'>
                 <p className=' text-neutral-400 text-sm my-5'>© 2025 Bhargava Krishna</p>
-                <a href="mailto:bk.adapala@gmail.com" className="text-neutral-400 text-sm my-5 hover:underline">bk.adapala@gmail.com</a>
+                <a href="mailto:bk.adapala@gmail.com" onClick={() => copyText('bk.adapala@gmail.com')} className="text-neutral-400 text-sm my-5 hover:underline">bk.adapala@gmail.com</a>
               </div>
             </div>
 
@@ -259,7 +299,7 @@ const Contact = () => {
                   <li><a href="https://www.linkedin.com/in/bhargavakrishnaadapala/ " target='_blank'><img src={linkedinlogo} alt="" className="invert" /></a></li>
                   <li><a href="https://x.com/Bhargava1028" target='_blank'><img src={xlogo} alt="" className="invert" /></a></li>
                 </ul>
-                <a  href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

@@ -19,7 +19,7 @@ const TechStack = () => {
         transition={{ delay: 0.2, duration: 0.4 }}
         className="text-center mb-10"
       >
-        <p className="text-sm text-gray-400 uppercase tracking-wide">I constantly try to improve</p>
+        <p className="text-sm text-neutral-400 tracking-wide">I constantly try to improve</p>
         <h2 className="text-4xl md:text-5xl font-bold mt-2">My Tech Stack</h2>
       </motion.div>
 
