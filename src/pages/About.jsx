@@ -13,7 +13,7 @@ const About = () => {
 
   const height = useTransform(scrollYProgress, [0, 0.25], ['70vh', '100vh']);
   const width = useTransform(scrollYProgress, [0, 0.1], ['80%', '100%']);
-  const borderRadius = useTransform(scrollYProgress, [0, 0.22], ['70px', '0px']);
+  const borderRadius = useTransform(scrollYProgress, [0, 0.16], ['70px', '0px']);
   const padding = useTransform(scrollYProgress, [0, 0.25], ['24px', '0px']);
 
   return (

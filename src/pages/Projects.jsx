@@ -119,7 +119,7 @@ const Projects = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <a href={projectData[currentIndex].live} target="_blank" rel="noreferrer">
-                <button className="group relative inline-flex h-11 w-12 items-center justify-center overflow-hidden rounded-full hover:bg-neutral-800 transition-all duration-300 hover:w-40 text-white">
+                <button className="group relative inline-flex h-11 w-12 items-center justify-center overflow-hidden rounded-full hover:bg-neutral-900 transition-all duration-300 hover:w-40 text-white">
                   <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
                     View Project
                   </div>
@@ -129,7 +129,7 @@ const Projects = () => {
                 </button>
               </a>
               <a href={projectData[currentIndex].code} target="_blank" rel="noreferrer">
-                <button className="group relative inline-flex h-11 w-12 items-center justify-center overflow-hidden rounded-full hover:bg-neutral-800 transition-all duration-300 hover:w-36 text-white">
+                <button className="group relative inline-flex h-11 w-12 items-center justify-center overflow-hidden rounded-full hover:bg-neutral-900 transition-all duration-300 hover:w-36 text-white">
                   <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
                     Github
                   </div>
