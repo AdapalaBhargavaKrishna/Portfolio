@@ -5,13 +5,13 @@ This portfolio showcases my projects, skills, and experience as a full-stack web
 
 ## 🌐 Live Website
 
-👉 [Visit My Portfolio]([https://your-portfolio-link.com](https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/#home))
+👉 [Visit My Portfolio](https://bhargava1028.web.app)
 
 ## ⚙️ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS
-- **Animations:** Framer Motion, GSAP, Anime.js
-- **Tools & Libraries:** React Icons, React Router, EmailJS, Vite
+- **Frontend:** React.js, Tailwind CSS  
+- **Animations:** Framer Motion, GSAP, Anime.js  
+- **Tools & Libraries:** React Icons, React Router, EmailJS, Vite  
 - **Design:** Responsive UI, Dark/Light Mode Toggle, 3D & Abstract Animated Shapes
 
 ## ✨ Features
