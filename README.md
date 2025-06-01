@@ -26,7 +26,3 @@ This portfolio highlights my projects, skills, and growth as a full-stack web de
 ## 📸 Preview
 
 ![Portfolio Preview](https://cdni.iconscout.com/illustration/premium/thumb/portfolio-illustration-download-in-svg-png-gif-file-formats--briefcase-bag-business-office-illustrations-1519810.png?f=webp)
-
----
-
-*Note: This portfolio currently features a dark-themed design but does not include a dark/light mode toggle.*
