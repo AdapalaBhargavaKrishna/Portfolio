@@ -1,7 +1,7 @@
 # 🧑‍💻 Bhargava's Portfolio
 
 Welcome to my personal developer portfolio! 🚀  
-This portfolio showcases my projects, skills, and experience as a full-stack web developer. Built with cutting-edge technologies and animated with powerful libraries, it’s designed to make a lasting impression.
+This portfolio highlights my projects, skills, and growth as a full-stack web developer. Built with modern technologies and animated for a dynamic feel, it reflects my passion for coding and continuous learning.
 
 ## 🌐 Live Website
 
@@ -12,18 +12,21 @@ This portfolio showcases my projects, skills, and experience as a full-stack web
 - **Frontend:** React.js, Tailwind CSS  
 - **Animations:** Framer Motion, GSAP, Anime.js  
 - **Tools & Libraries:** React Icons, React Router, EmailJS, Vite  
-- **Design:** Responsive UI, Dark/Light Mode Toggle, 3D & Abstract Animated Shapes
+- **Design:** Responsive UI with smooth animations and 3D/abstract animated shapes  
 
 ## ✨ Features
 
 - 🔥 Smooth animations and transitions  
-- 🌙 Light/Dark mode toggle  
 - 📱 Fully responsive layout  
 - 🛠️ Modular and reusable components  
 - 📂 Projects section with live links and GitHub repositories  
-- 📫 Contact form with EmailJS integration  
+- 📫 Contact form integrated with EmailJS  
 - 🎨 Beautiful radial background effects and motion text  
 
 ## 📸 Preview
 
 ![Portfolio Preview](https://cdni.iconscout.com/illustration/premium/thumb/portfolio-illustration-download-in-svg-png-gif-file-formats--briefcase-bag-business-office-illustrations-1519810.png?f=webp)
+
+---
+
+*Note: This portfolio currently features a dark-themed design but does not include a dark/light mode toggle.*
