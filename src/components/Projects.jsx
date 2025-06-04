@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <>
-    <div className="bg-black min-h-screen text-white px-4 md:px-8 py-16 pt-10 pb-[15%]">
+    <div className="bg-black min-h-screen text-white px-4 md:px-8 py-28 pb-[15%]">
       <p className="text-center text-neutral-400 text-sm">From Idea to Interface</p>
       <motion.div
         className="text-3xl ml-2 md:text-6xl font-bold text-center mb-5 flex items-center justify-center gap-2"
