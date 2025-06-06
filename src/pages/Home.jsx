@@ -44,7 +44,7 @@ const Home = () => {
         className={`relative flex items-center justify-center h-full text-white transition-all duration-300 ease-out ${disablePointerEvents ? 'pointer-events-none' : ''
           }`}
       >
-        <div className="flex flex-col items-center justify-center text-center px-6 md:px-12 mb-28 w-full">
+        <div className="flex flex-col items-center justify-center text-center px-6 md:px-12 md:mb-28 mb-20 w-full">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

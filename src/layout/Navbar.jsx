@@ -90,7 +90,7 @@ const NavBar = () => {
           <Link className={`${Navbutton ? "hidden" : "flex"}`} to="/#home">
             <div className="flex items-center gap-2">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-gray-800 to-gray-900 text-white shadow-lg">
-                <span className="font-display text-lg font-bold tracking-wider">BK</span>
+                <span className="font-mono text-lg font-bold tracking-wider">BK</span>
               </div>
               <h2 className="text-blue-50 font-bold text-xl">Bhargava Krishna</h2>
             </div>

@@ -27,7 +27,7 @@ const About = () => {
 
           <div className='bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center p-1'>
             <div className="flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-gray-800 to-gray-900 text-white shadow-lg">
-              <span className="font-display text-xl md:text-2xl font-bold tracking-wider">BK</span>
+              <span className="font-mono text-xl md:text-2xl font-bold tracking-wider">BK</span>
             </div>
           </div>
 
