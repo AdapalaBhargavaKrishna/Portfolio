@@ -192,7 +192,7 @@ const Contact = () => {
               viewport={{ once: false, amount: 0.4 }}
               className="md:col-span-2 lg:w-[55%]"
             >
-              <div className="bg-black/30 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 md:p-12 shadow-xl shadow-purple-900/10">
+              <div className="bg-black/30 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 md:p-12 shadow-2xl shadow-purple-900/25">
                 <h2 className="text-3xl font-bold mb-2">
                   <span className="text-purple-400">Send me</span> a message
                 </h2>
