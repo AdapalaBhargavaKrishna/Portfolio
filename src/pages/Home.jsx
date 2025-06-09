@@ -116,7 +116,7 @@ const Home = () => {
             </a>
             <a href="#contact">
 
-              <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-white px-4 font-medium text-black duration-500">
+              <button class="group relative inline-flex h-10 md:h-12 items-center justify-center overflow-hidden rounded-full bg-white px-2 md:px-4 font-medium text-black duration-500">
                 <div class="relative flex -translate-x-0 items-center transition group-hover:-translate-x-6">
                   <div class=" translate-x-0 mt-[2px] opacity-100 transition group-hover:-translate-x-6 group-hover:opacity-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
                     <path d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
