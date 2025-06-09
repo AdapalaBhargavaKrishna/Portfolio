@@ -29,7 +29,7 @@ const Projects = () => {
 
       {/* Web */}
       <div className="hidden md:flex relative gap-10">
-        
+
         {/* LEFT */}
         <div className="w-full lg:w-3/5 flex flex-col gap-20">
           {projectData.slice(0, 5).map((project, index) => (
@@ -102,7 +102,7 @@ const Projects = () => {
                   className="flex items-center gap-2 px-4 py-2 bg-neutral-900 border border-neutral-700 rounded-xl cursor-pointer"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  whileHover={{scale: 1.1}}
+                  whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
                 >
                   <img src={techMap[tech]} alt={tech} className="w-5 h-5" />
@@ -112,29 +112,53 @@ const Projects = () => {
             </div>
 
             <motion.div
-              className="flex gap-4"
+              className="flex gap-7 "
               key={currentIndex + 'buttons'}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <a href={projectData[currentIndex].live} target="_blank" rel="noreferrer">
-                <button className="group relative inline-flex h-11 w-12 items-center justify-center overflow-hidden rounded-full hover:bg-neutral-900 transition-all duration-300 hover:w-40 text-white">
-                  <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
-                    View Project
-                  </div>
-                  <div className="absolute right-3.5">
-                    <img src={linksvg} alt="" />
-                  </div>
-                </button>
-              </a>
               <a href={projectData[currentIndex].code} target="_blank" rel="noreferrer">
-                <button className="group relative inline-flex h-11 w-12 items-center justify-center overflow-hidden rounded-full hover:bg-neutral-900 transition-all duration-300 hover:w-36 text-white">
-                  <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
-                    Github
-                  </div>
-                  <div className="absolute right-3.5">
-                    <img src={githublogo} alt="" />
+                <img src={githublogo} className='w-8 h-11' alt="" />
+              </a>
+
+              <a href={projectData[currentIndex].live} target="_blank" rel="noreferrer">
+                <button className="hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group relative inline-flex h-10 md:h-11 items-center justify-center rounded-full px-4 bg-white font-normal text-black">
+                  <span>Check It Out</span>
+                  <div className="relative ml-1 h-5 w-5 overflow-hidden">
+                    <div className="absolute transition-all duration-200 group-hover:-translate-y-5 group-hover:translate-x-4">
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                      >
+                        <path
+                          d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
+                          fill="currentColor"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 -translate-x-4"
+                      >
+                        <path
+                          d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
+                          fill="currentColor"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </a>
@@ -147,15 +171,15 @@ const Projects = () => {
 
       {/* Mobile  */}
       <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 p-1 gap-20">
-      {projectData.slice(0, 5).map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
-    </div>
-      
+        {projectData.slice(0, 5).map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+
       <Link to={'/projects'} className="group flex w-fit items-center justify-center gap-2 group-hover:text-neutral-100 mt-20 mx-auto rounded-full px-2 cursor-pointer">
-       <button className="group relative inline-flex h-[calc(48px+0px)] group-hover:text-black items-center justify-center rounded-full pl-6 pr-12 font-semibold text-lg text-neutral-50"><span className="z-10 pr-4"> see more projects</span><div className="absolute right-2 inline-flex h-11 w-11 items-center justify-end rounded-full bg-white transition-[width] group-hover:w-[calc(100%-8px)]"><div className="mr-[10px] flex items-center justify-center"><img src={arrowsvg} alt="" /></div></div></button>
-       </Link>
-      
+        <button className="group relative inline-flex h-[calc(48px+0px)] group-hover:text-black items-center justify-center rounded-full pl-6 pr-12 font-semibold text-lg text-neutral-50"><span className="z-10 pr-4"> see more projects</span><div className="absolute right-2 inline-flex h-11 w-11 items-center justify-end rounded-full bg-white transition-[width] group-hover:w-[calc(100%-8px)]"><div className="mr-[10px] flex items-center justify-center"><img src={arrowsvg} alt="" /></div></div></button>
+      </Link>
+
     </div>
   );
 };
