@@ -24,6 +24,14 @@ export const projectData = [
     tech: ["React", "Tailwind", "GSAP", "API", "Firebase"],
   },
   {
+    title: "File Switch - Convert Any File Easily",
+    description: "A powerful file converter web app that allows users to convert images, audio, and video formats directly in the browser using FFmpeg.wasm. It features drag-and-drop upload, smart format detection, a dark/light mode toggle, and smooth Framer Motion animations for a seamless user experience.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/fileswitch.png",
+    live: "https://fileswitch.vercel.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    tech: ["React", "Tailwind", "Framer Motion", "ffmpeg", "Vercel"],
+  },
+  {
     title: "NewzX - Personalized News Feed",
     description: "A real-time news web app with topic filters, search functionality, and dynamic content delivery. It offers a responsive and modern UI, tailored to deliver trending headlines that match your interests.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/newzx.png",

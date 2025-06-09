@@ -18,6 +18,7 @@ import expressjsLogo from '../assets/svg/expressjs.svg';
 import framerLogo from '../assets/svg/framermotion.svg';
 import gsapLogo from '../assets/svg/gsap.svg';
 import flasklogo from '../assets/svg/flask.svg';
+import ffmpeglogo from '../assets/svg/ffmpeg.svg';
 import apilogo from '../assets/svg/api.svg';
 import tailwindLogo from '../assets/svg/tailwind.svg';
 import npmLogo from '../assets/svg/npm.svg';
@@ -69,6 +70,7 @@ export const techMap =  {
   Cloud: cloudLogo,
   Firebase: firebaseLogo,
   Git: gitLogo,
+  ffmpeg: ffmpeglogo,
   GitHub: githubLogo,
   API: apilogo,
   npm: npmLogo,
