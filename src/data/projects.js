@@ -43,7 +43,7 @@ export const projectData = [
     title: "Get Me a Coffee - Donation Page",
     description: "A platform to support developers inspired by BuyMeACoffee, allowing users to make donations and leave messages for creators. Features seamless data handling, a responsive UI, and engaging animations to enhance user experience.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/getmeacoffee.png",
-    live: "https://attendance-calculator-tau.vercel.app/",
+    live: "https://get-me-a-coffee-rho.vercel.app/",
     code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
     tech: ["NextJS", "React", "Tailwind", "MongoDB", "GSAP"]
   },
