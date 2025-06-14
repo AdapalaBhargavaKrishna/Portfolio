@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import linksvg from '../assets/svg/link.svg'
+import videosvg from '../assets/svg/video.svg'
 import arrowsvg from '../assets/svg/arrow.svg'
+import closesvg from '../assets/svg/close.svg'
 import githublogo from '../assets/svg/githubw.svg'
 import { techMap } from '../data/techMap';
 import ProjectCard from '../layout/ProjectCard'
@@ -11,10 +12,16 @@ import { projectData } from '../data/projects'
 const Projects = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentVideo, setcurrentVideo] = useState(null)
+
+  const ShowVideo = (video) => {
+    
+  }
 
   return (
     <div id="projects" className="bg-black min-h-screen text-white px-4 md:px-8 py-16">
       <p className="text-center text-neutral-400 text-sm">From Idea to Interface</p>
+      
       <motion.div
         className="text-4xl ml-2 mt-2 md:text-6xl font-bold text-center mb-20 flex items-center justify-center gap-2"
         initial={{ opacity: 0, y: -20 }}
@@ -26,6 +33,23 @@ const Projects = () => {
           Creativity
         </span>
       </motion.div>
+
+      {currentVideo && (
+  <div className="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-70">
+    <div className="relative w-[90%] md:w-[70%] lg:w-[50%] aspect-video bg-neutral-950 rounded-xl overflow-hidden shadow-xl p-8">
+      
+      <iframe className='w-full h-full' src={`${currentVideo}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <button
+        onClick={() => setcurrentVideo(null)}
+        className="absolute top-2 right-2 text-white bg-black/60 hover:bg-black/80 p-2 rounded-full"
+        title="Close"
+      >
+        <img src={closesvg} alt="" />
+      </button>
+    </div>
+  </div>
+)}
+
 
       {/* Web */}
       <div className="hidden md:flex relative gap-10">
@@ -118,10 +142,15 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <a href={projectData[currentIndex].code} target="_blank" rel="noreferrer">
+              <a href={projectData[currentIndex].code} target="_blank" rel="noreferrer" title='GitHub'>
                 <img src={githublogo} className='w-8 h-11' alt="" />
               </a>
 
+            {projectData[currentIndex].video &&
+              <a onClick={() => setcurrentVideo(projectData[currentIndex].video)} className='cursor-pointer' target="_blank" rel="noreferrer" title='Preview Video'>
+                <img src={videosvg} className='w-8 h-11' alt="" />
+              </a>
+            }
               <a href={projectData[currentIndex].live} target="_blank" rel="noreferrer">
                 <button className="hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group relative inline-flex h-10 md:h-11 items-center justify-center rounded-full px-4 bg-white font-normal text-black">
                   <span>Check It Out</span>
@@ -169,7 +198,6 @@ const Projects = () => {
 
       </div>
 
-      {/* Mobile  */}
       <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 p-1 gap-20">
         {projectData.slice(0, 5).map((project, index) => (
           <ProjectCard key={index} project={project} />

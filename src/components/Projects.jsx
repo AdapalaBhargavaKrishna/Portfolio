@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Contact from '../components/Contact'
-import linksvg from '../assets/svg/link.svg'
 import githublogo from '../assets/svg/githubw.svg'
 import { techMap } from '../data/techMap';
 import ProjectCard from '../layout/ProjectCard'
