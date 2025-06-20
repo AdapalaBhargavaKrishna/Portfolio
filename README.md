@@ -25,4 +25,4 @@ This portfolio highlights my projects, skills, and growth as a full-stack web de
 
 ## 📸 Preview
 
-![Portfolio Preview](https://cdni.iconscout.com/illustration/premium/thumb/portfolio-illustration-download-in-svg-png-gif-file-formats--briefcase-bag-business-office-illustrations-1519810.png?f=webp)
+![Portfolio Preview](https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/portfolio.png)
