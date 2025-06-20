@@ -1,20 +1,20 @@
 export const projectData = [
   {
-    title: "AttendEz - College Management System",
-    description: "An all-in-one college management system for students and faculty. Features include attendance tracking, academic reports, fee monitoring, announcements, and schedules — all integrated into a sleek and responsive UI.",
-    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendz.png",
-    live: "https://adapalabhargavakrishna.github.io/Web-Development/AttendEz/index.html",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
-    tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "GSAP"],
-    video: "",
-  },
-  {
     title: "AutoTube - AI-Powered Learning Assistant",
     description: "AutoTube transforms YouTube videos into structured learning experiences. With features like AI-powered summarization, history tracking, Smart Qna's, and personalized dashboards, it enhances the way users consume and retain educational content.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/autotube.png",
     live: "https://autotubeai.netlify.app",
     code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/AutoTube",
     tech: ["React", "Tailwind", "Framer Motion", "Node.js", "Express.js", "MongoDB", "Firebase", "API", "Groq AI", "Netlify"],
+    video: "",
+  },
+  {
+    title: "AttendEz - College Management System",
+    description: "An all-in-one college management system for students and faculty. Features include attendance tracking, academic reports, fee monitoring, announcements, and schedules — all integrated into a sleek and responsive UI.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendz.png",
+    live: "https://adapalabhargavakrishna.github.io/Web-Development/AttendEz/index.html",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "GSAP"],
     video: "",
   },
   {
