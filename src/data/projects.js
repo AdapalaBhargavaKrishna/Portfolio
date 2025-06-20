@@ -9,6 +9,15 @@ export const projectData = [
     video: "",
   },
   {
+    title: "AutoTube - AI-Powered Learning Assistant",
+    description: "AutoTube transforms YouTube videos into structured learning experiences. With features like AI-powered summarization, history tracking, Smart Qna's, and personalized dashboards, it enhances the way users consume and retain educational content.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/autotube.png",
+    live: "https://autotubeai.netlify.app",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/AutoTube",
+    tech: ["React", "Tailwind", "Framer Motion", "Node.js", "Express.js", "MongoDB", "Firebase", "API", "Groq AI", "Netlify"],
+    video: "",
+  },
+  {
     title: "SafePass - Password Vault",
     description: "A secure password manager with encrypted storage and a user-friendly interface. Easily store, copy, and manage your credentials while ensuring data safety with modern tech stack.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/safepass.png",

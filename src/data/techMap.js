@@ -11,6 +11,7 @@ import netlifyLogo from '../assets/svg/netlify.svg';
 import nodeLogo from '../assets/svg/node.svg';
 import postmanLogo from '../assets/svg/postman.svg';
 import cloudLogo from '../assets/svg/cloud.svg';
+import groqLogo from '../assets/svg/groq.svg';
 import pythonLogo from '../assets/svg/python.svg';
 import reactjsLogo from '../assets/svg/reactjs.svg';
 import nextjsLogo from '../assets/svg/nextjs.svg';
@@ -68,6 +69,7 @@ export const techMap =  {
   MongoDB: mongodbLogo,
   MySQL: mysqlLogo,
   Cloud: cloudLogo,
+  'Groq AI': groqLogo,
   Firebase: firebaseLogo,
   Git: gitLogo,
   ffmpeg: ffmpeglogo,
