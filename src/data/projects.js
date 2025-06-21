@@ -72,7 +72,8 @@ export const projectData = [
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendancecalculator.png",
     live: "https://attendance-calculator-tau.vercel.app/",
     code: "https://github.com/AdapalaBhargavaKrishna/Attendance-Calculator",
-    tech: ["HTML", "CSS", "JavaScript", "Python", "Flask", "GSAP"]
+    tech: ["HTML", "CSS", "JavaScript", "Python", "Flask", "GSAP"],
+    video: "https://www.youtube.com/embed/4wrMTehxvkg?si=5YF8c6BW7lxFu7Z0"
   },
   {
     title: "TaskFocus - Productivity Tracker",
