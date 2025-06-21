@@ -55,7 +55,8 @@ export const projectData = [
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/getmeacoffee.png",
     live: "https://get-me-a-coffee-rho.vercel.app/",
     code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
-    tech: ["NextJS", "React", "Tailwind", "MongoDB", "GSAP"]
+    tech: ["NextJS", "React", "Tailwind", "MongoDB", "GSAP"],
+    video: "https://www.youtube.com/embed/I5ieo1I5Lx8?si=2fSblcU-sm4osa_U"
   },
   {
     title: "RecipeMate - Explore and Cook",
