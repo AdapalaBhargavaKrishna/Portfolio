@@ -7,12 +7,15 @@ import ProjectCard from '../layout/ProjectCard'
 import { useLocation } from 'react-router-dom'
 import { projectData } from '../data/projects'
 import colsvg from '../assets/svg/horizontal.svg'
+import videosvg from '../assets/svg/video.svg'
+import closesvg from '../assets/svg/close.svg'
 import gridsvg from '../assets/svg/grid.svg'
 
 const Projects = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVertical, setIsVertical] = useState(true)
+  const [currentVideo, setcurrentVideo] = useState(null)
 
   const { pathname } = useLocation();
   useEffect(() => {
@@ -49,6 +52,21 @@ const Projects = () => {
             Creativity
           </span>
         </motion.div>
+        {currentVideo && (
+          <div className="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-70">
+            <div className="relative w-[90%] md:w-[70%] lg:w-[70%] aspect-video bg-opacity-80 rounded-xl overflow-hidden shadow-xl p-7">
+
+              <iframe className='w-full h-full' src={`${currentVideo}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <button
+                onClick={() => setcurrentVideo(null)}
+                className="absolute top-2 right-2 text-white bg-black/60 hover:bg-black/80 p-2 rounded-full"
+                title="Close"
+              >
+                <img src={closesvg} alt="" />
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className='hidden md:flex flex-wrap items-center gap-4 justify-end md:justify-end w-full md:w-11/12 pr-0 md:pr-5 mx-auto mb-2'>
           <button onClick={() => setIsVertical(true)} className={`${isVertical ? 'bg-neutral-800 border border-neutral-600 p-2 rounded-xl' : 'p-2'}`}>
@@ -161,7 +179,13 @@ const Projects = () => {
                     className="w-8 h-8 transition-all"
                   />
                 </a>
- 
+
+                {projectData[currentIndex].video &&
+                  <a onClick={() => setcurrentVideo(projectData[currentIndex].video)} className='cursor-pointer' target="_blank" rel="noreferrer" title='Preview Video'>
+                    <img src={videosvg} className='w-8 h-11' alt="" />
+                  </a>
+                }
+
                 <a href={projectData[currentIndex].live} target="_blank" rel="noreferrer">
                   <button className="hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group relative inline-flex h-10 md:h-11 items-center justify-center rounded-full px-4 bg-white font-normal text-black">
                     <span>Check It Out</span>

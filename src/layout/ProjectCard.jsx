@@ -4,7 +4,7 @@ import { techMap } from '../data/techMap'
 
 const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const { title, description, image, live, code, tech } = project;
+  const { title, description, image, live, code, tech, video } = project;
 
   return (
     <div
@@ -61,6 +61,15 @@ const ProjectCard = ({ project }) => {
           >
             Live Demo
           </a>
+
+          {video && (
+            <button
+              onClick={() => window.open(video, "_blank")}
+              className="text-sm font-semibold text-purple-400 hover:text-purple-600 transition"
+            >
+              Watch Video
+            </button>
+          )}
           <a
             href={code}
             target="_blank"

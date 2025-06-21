@@ -15,7 +15,7 @@ export const projectData = [
     live: "https://adapalabhargavakrishna.github.io/Web-Development/AttendEz/index.html",
     code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "GSAP"],
-    video: "",
+    video: "https://www.youtube.com/embed/FBZh1hZPT3U?si=ZJuNoNHLfk8oQNEO",
   },
   {
     title: "SafePass - Password Vault",
