@@ -40,7 +40,7 @@ export const projectData = [
     live: "https://attendance-calculate.vercel.app/",
     code: "https://github.com/AdapalaBhargavaKrishna/Attendance-Calculator",
     tech: ["React", "Tailwind", "Node.js", "Express.js", "Framer Motion"],
-    video: "https://www.youtube.com/embed/vRcBY6t75vg?si=7732aweECpY8D4JQ"
+    video: "https://www.youtube.com/embed/oa77CjwTnxE?si=jeu5otIbgyEE4-SC"
   },
   {
     title: "SafePass - Password Vault",
