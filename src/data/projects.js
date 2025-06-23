@@ -18,12 +18,12 @@ export const projectData = [
     video: "https://www.youtube.com/embed/FBZh1hZPT3U?si=ZJuNoNHLfk8oQNEO",
   },
   {
-    title: "SafePass - Password Vault",
-    description: "A secure password manager with encrypted storage and a user-friendly interface. Easily store, copy, and manage your credentials while ensuring data safety with modern tech stack.",
-    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/safepass.png",
-    live: "https://safepassx.netlify.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
-    tech: ["React", "Tailwind", "MongoDB", "Node.js", "Express.js", "GSAP"],
+    title: "File Switch - Convert Any File Easily",
+    description: "A powerful file converter web app that allows users to convert images, audio, and video formats directly in the browser using FFmpeg.wasm. It features drag-and-drop upload, smart format detection, a dark/light mode toggle, and smooth Framer Motion animations for a seamless user experience.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/fileswitch.png",
+    live: "https://fileswitch.vercel.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    tech: ["React", "Tailwind", "Framer Motion", "ffmpeg", "Vercel"],
   },
   {
     title: "MovieShelf - Watchlist, Reviews & More",
@@ -34,12 +34,21 @@ export const projectData = [
     tech: ["React", "Tailwind", "GSAP", "API", "Firebase"],
   },
   {
-    title: "File Switch - Convert Any File Easily",
-    description: "A powerful file converter web app that allows users to convert images, audio, and video formats directly in the browser using FFmpeg.wasm. It features drag-and-drop upload, smart format detection, a dark/light mode toggle, and smooth Framer Motion animations for a seamless user experience.",
-    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/fileswitch.png",
-    live: "https://fileswitch.vercel.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
-    tech: ["React", "Tailwind", "Framer Motion", "ffmpeg", "Vercel"],
+    title: "Attendance Calculator – Automated web app",
+    description: "A full-stack web app that helps students calculate and predict attendance requirements. CBIT students can also fetch their live attendance using roll number via Selenium automation. Built with React, Node.js, Express, Tailwind CSS, and Framer Motion for a sleek, animated user experience.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendancecalculator.png",
+    live: "https://attendance-calculate.vercel.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Attendance-Calculator",
+    tech: ["React", "Tailwind", "Node.js", "Express.js", "Framer Motion"],
+    video: "https://www.youtube.com/embed/vRcBY6t75vg?si=7732aweECpY8D4JQ"
+  },
+  {
+    title: "SafePass - Password Vault",
+    description: "A secure password manager with encrypted storage and a user-friendly interface. Easily store, copy, and manage your credentials while ensuring data safety with modern tech stack.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/safepass.png",
+    live: "https://safepassx.netlify.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    tech: ["React", "Tailwind", "MongoDB", "Node.js", "Express.js", "GSAP"],
   },
   {
     title: "NewzX - Personalized News Feed",
@@ -65,15 +74,6 @@ export const projectData = [
     live: "https://recipemate-bk.netlify.app/",
     code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
     tech: ["React", "Tailwind", "GSAP", "API", "Netlify"],
-  },
-  {
-    title: "Attendance Calculator - Flask App",
-    description: "A Python Flask-powered web tool that helps students calculate required attendance to maintain minimum percentages. Features animated UI and clear user input flow.",
-    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendancecalculator.png",
-    live: "https://attendance-calculator-tau.vercel.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Attendance-Calculator",
-    tech: ["HTML", "CSS", "JavaScript", "Python", "Flask", "GSAP"],
-    video: "https://www.youtube.com/embed/4wrMTehxvkg?si=5YF8c6BW7lxFu7Z0"
   },
   {
     title: "TaskFocus - Productivity Tracker",
