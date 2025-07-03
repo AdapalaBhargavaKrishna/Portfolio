@@ -7,7 +7,7 @@ import ProjectCard from '../layout/ProjectCard'
 import { useLocation } from 'react-router-dom'
 import { projectData } from '../data/projects'
 import colsvg from '../assets/svg/horizontal.svg'
-import videosvg from '../assets/svg/video.svg'
+import videosvg from '../assets/svg/videoc.svg'
 import closesvg from '../assets/svg/close.svg'
 import gridsvg from '../assets/svg/grid.svg'
 

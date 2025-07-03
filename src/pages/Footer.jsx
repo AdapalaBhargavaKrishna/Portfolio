@@ -52,7 +52,7 @@ const Footer = () => {
             <div className='flex flex-col items-center gap-4'>
               <h1 className='font-semibold text-white text-lg mb-1'>Links</h1>
               <ul className='text-neutral-300 flex gap-4 mb-4'>
-                <li><a href="https://github.com/AdapalaBhargavaKrishna" target='_blank'><img src={githublogo} alt="" className="invert" /></a></li>
+                <li><a href="https://github.com/AdapalaBhargavaKrishna" target='_blank'><img src={githublogo} alt="" className="invert w-6 h-6" /></a></li>
                 <li><a href="https://www.linkedin.com/in/bhargavakrishnaadapala/ " target='_blank'><img src={linkedinlogo} alt="" className="invert" /></a></li>
                 <li><a href="https://x.com/Bhargava1028" target='_blank'><img src={xlogo} alt="" className="invert" /></a></li>
               </ul>

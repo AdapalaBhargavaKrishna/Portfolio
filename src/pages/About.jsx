@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import githublogo from '../assets/svg/github.svg';
-import linkedinlogo from '../assets/svg/linkedin.svg';
+import linkedinlogo from '../assets/svg/linkedinc.svg';
 import xlogo from '../assets/svg/x.svg';
 import ImageCarousel from '../layout/ImageCarousel'
 import TechStack from '../layout/TechStack'
@@ -39,9 +39,9 @@ const About = () => {
             className="bg-white/5 backdrop-blur-sm space-y-2 p-4 rounded-2xl border border-white/10 shadow-xl w-full max-w-4xl mt-2"
           >
             <h1 className='font-bold text-[1.7rem] md:text-4xl text-center text-black'>About Me</h1>
-            <p className='text-center font-normal text-base'>I'm Bhargava, a passionate full-stack developer driven by a love for building seamless digital experiences. From crafting responsive frontends to designing robust backends, I enjoy turning complex challenges into clean, scalable code. My stack includes React.js, Node.js, and more, and I'm constantly leveling up my skills.</p>
-            <p className='text-center font-normal text-base'>Beyond the screen, I'm a curious mind—always exploring fresh ideas and innovative solutions. I believe in staying up-to-date with the ever-evolving tech world, keeping learning fun and exciting. Whether it's a new framework or a unique side project, I'm always ready to dive in.</p>
-            <p className='text-center font-normal text-base'>Each day, I aim to grow, create, and spread positivity. For me, success isn't just about code—it's about living with purpose, learning with intention, and making a difference wherever I can.</p>
+            <p className='text-center font-normal text-base'>I'm Bhargava, a passionate Full Stack Developer driven by a love for building seamless digital experiences. From crafting responsive frontends to designing robust backends, I enjoy turning complex challenges into clean, scalable code. My stack includes React.js, Node.js, and more, and I'm constantly leveling up my skills.</p>
+            <p className='text-center font-normal text-base'>Beyond the screen, I'm a curious mind always exploring fresh ideas and innovative solutions. I believe in staying up-to-date with the ever evolving tech world, keeping learning fun and exciting. Whether it's a new framework or a unique side project, I'm always ready to dive in.</p>
+            <p className='text-center font-normal text-base'>Each day, I aim to grow, create, and spread positivity. For me, success isn't just about code it's about living with purpose, learning with intention, and making a difference wherever I can.</p>
 
           </motion.div>
 

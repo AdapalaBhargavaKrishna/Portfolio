@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import videosvg from '../assets/svg/video.svg'
+import videosvg from '../assets/svg/videoc.svg'
 import arrowsvg from '../assets/svg/arrow.svg'
 import closesvg from '../assets/svg/close.svg'
 import githublogo from '../assets/svg/githubw.svg'
