@@ -14,6 +14,7 @@ import cloudLogo from '../assets/svg/cloud.svg';
 import groqLogo from '../assets/svg/groq.svg';
 import pythonLogo from '../assets/svg/python.svg';
 import reactjsLogo from '../assets/svg/reactjs.svg';
+import bootstrapLogo from '../assets/svg/bootstrap.svg';
 import nextjsLogo from '../assets/svg/nextjs.svg';
 import expressjsLogo from '../assets/svg/expressjs.svg';
 import framerLogo from '../assets/svg/framermotion.svg';
@@ -34,6 +35,7 @@ export const techStack = [
   { name: 'HTML', logo: htmlLogo },
   { name: 'CSS', logo: cssLogo },
   { name: 'Tailwind', logo: tailwindLogo },
+  { name: 'BootStrap', logo: bootstrapLogo },
   { name: 'Node.js', logo: nodeLogo },
   { name: 'Express.js', logo: expressjsLogo },
   { name: 'Cloud', logo: cloudLogo },
