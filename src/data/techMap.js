@@ -7,6 +7,7 @@ import javaLogo from '../assets/svg/java.svg';
 import javascriptLogo from '../assets/svg/javascript.svg';
 import mongodbLogo from '../assets/svg/mongodb.svg';
 import mysqlLogo from '../assets/svg/mysql.svg';
+import socketioLogo from '../assets/svg/socketio.svg';
 import netlifyLogo from '../assets/svg/netlify.svg';
 import nodeLogo from '../assets/svg/node.svg';
 import postmanLogo from '../assets/svg/postman.svg';
@@ -65,6 +66,7 @@ export const techMap =  {
   'Flask': flasklogo,
   Python: pythonLogo,
   Java: javaLogo,
+  'Socket.IO': socketioLogo,
   Tailwind: tailwindLogo,
   'Framer Motion': framerLogo,
   GSAP: gsapLogo,

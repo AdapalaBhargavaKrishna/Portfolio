@@ -9,6 +9,15 @@ export const projectData = [
     video: "",
   },
   {
+    title: "StreamSync – Watch Together, From Anywhere",
+    description: "A real-time co-watching web app that synchronizes YouTube playback across multiple users. StreamSync supports room-based sessions with Socket.IO, chat, host controls, and dynamic video syncing — making remote movie nights effortless.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/streamsync.png",
+    live: "https://streamsyncc.vercel.app",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/StreamSync",
+    tech: ["React", "Tailwind", "Framer Motion", "Socket.IO", "Node.js", "Express.js", "MongoDB", "API", "Vercel"],
+    video: ""
+  },
+  {
     title: "AttendEz - College Management System",
     description: "An all-in-one college management system for students and faculty. Features include attendance tracking, academic reports, fee monitoring, announcements, and schedules — all integrated into a sleek and responsive UI.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendz.png",
