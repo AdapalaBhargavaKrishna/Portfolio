@@ -31,7 +31,7 @@ export const projectData = [
     description: "A powerful file converter web app that allows users to convert images, audio, and video formats directly in the browser using FFmpeg.wasm. It features drag-and-drop upload, smart format detection, a dark/light mode toggle, and smooth Framer Motion animations for a seamless user experience.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/fileswitch.png",
     live: "https://fileswitch.vercel.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    code: "https://github.com/AdapalaBhargavaKrishna/FileSwitch",
     tech: ["React", "Tailwind", "Framer Motion", "ffmpeg", "Vercel"],
   },
   {
