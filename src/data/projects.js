@@ -13,7 +13,7 @@ export const projectData = [
     description: "A real-time co-watching web app that synchronizes YouTube playback across multiple users. StreamSync supports room-based sessions with Socket.IO, chat, host controls, and dynamic video syncing — making remote movie nights effortless.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/streamsync.png",
     live: "https://streamsyncc.vercel.app",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/StreamSync",
+    code: "https://github.com/AdapalaBhargavaKrishna/StreamSync",
     tech: ["React", "Tailwind", "Framer Motion", "Socket.IO", "Node.js", "Express.js", "MongoDB", "API", "Vercel"],
     video: "https://www.youtube.com/embed/QucA4W4RBL0?si=RT7TAq605ry0vwlz"
   },
