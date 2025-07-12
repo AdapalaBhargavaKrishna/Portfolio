@@ -15,7 +15,7 @@ export const projectData = [
     live: "https://streamsyncc.vercel.app",
     code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/StreamSync",
     tech: ["React", "Tailwind", "Framer Motion", "Socket.IO", "Node.js", "Express.js", "MongoDB", "API", "Vercel"],
-    video: ""
+    video: "https://www.youtube.com/embed/QucA4W4RBL0?si=RT7TAq605ry0vwlz"
   },
   {
     title: "AttendEz - College Management System",

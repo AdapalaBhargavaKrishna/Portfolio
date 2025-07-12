@@ -56,13 +56,13 @@ const Home = () => {
               New
             </span>
             <a
-              href="https://autotubeai.netlify.app/"
+              href="https://streamsyncc.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs md:text-sm text-gray-200 hover:underline"
             >
               Check out my latest creation{' '}
-              <span className="text-white font-semibold">AutoTube</span> →
+              <span className="text-white font-semibold">StreamSync</span> →
             </a>
           </motion.div>
 
