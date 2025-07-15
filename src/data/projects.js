@@ -39,7 +39,7 @@ export const projectData = [
     description: "A feature-rich movie companion app that lets users search, save, and organize favorite movies with Firebase Auth. It includes detailed info like ratings, trailers, and cast for an immersive experience.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/movieshelf.png",
     live: "https://movieshelf-bk.netlify.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/MovieShelf",
     tech: ["React", "Tailwind", "GSAP", "API", "Firebase"],
   },
   {
@@ -56,7 +56,7 @@ export const projectData = [
     description: "A secure password manager with encrypted storage and a user-friendly interface. Easily store, copy, and manage your credentials while ensuring data safety with modern tech stack.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/safepass.png",
     live: "https://safepassx.netlify.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/PassWord%20Manager",
     tech: ["React", "Tailwind", "MongoDB", "Node.js", "Express.js", "GSAP"],
   },
   {
@@ -64,7 +64,7 @@ export const projectData = [
     description: "A real-time news web app with topic filters, search functionality, and dynamic content delivery. It offers a responsive and modern UI, tailored to deliver trending headlines that match your interests.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/newzx.png",
     live: "https://newzzx.netlify.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/NewzX",
     tech: ["React", "Tailwind", "Framer Motion", "API", "Netlify"],
   },
   {
@@ -72,7 +72,7 @@ export const projectData = [
     description: "A platform to support developers inspired by BuyMeACoffee, allowing users to make donations and leave messages for creators. Features seamless data handling, a responsive UI, and engaging animations to enhance user experience.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/getmeacoffee.png",
     live: "https://get-me-a-coffee-rho.vercel.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/get-me-a-coffee",
     tech: ["NextJS", "React", "Tailwind", "MongoDB", "GSAP"],
     video: "https://www.youtube.com/embed/I5ieo1I5Lx8?si=2fSblcU-sm4osa_U"
   },
@@ -81,7 +81,7 @@ export const projectData = [
     description: "A responsive recipe discovery platform offering step-by-step cooking instructions, ingredients, and tutorial videos. API-driven with a clean UI, perfect for beginners and pros alike.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/RecipeMate.png",
     live: "https://recipemate-bk.netlify.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/RecipeMate",
     tech: ["React", "Tailwind", "GSAP", "API", "Netlify"],
   },
   {
@@ -89,7 +89,7 @@ export const projectData = [
     description: "A minimalist task manager that helps users organize and prioritize daily tasks. Featuring a clean UI with status tracking and smooth animations to enhance focus and workflow efficiency.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/Todo.png",
     live: "https://taskfocus-bk.netlify.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/Todo-List",
     tech: ["React", "Tailwind", "GSAP", "Netlify"]
   },
   {
@@ -97,7 +97,7 @@ export const projectData = [
     description: "A responsive weather application that displays real-time weather conditions, 5-day forecasts, and daily highlights including temperature, wind speed, humidity, and sunrise/sunset timings. Enhanced with animation and a clean, intuitive interface.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/Weather.png",
     live: "https://adapalabhargavakrishna.github.io/Web-Development/Weather/index.html",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/Weather",
     tech: ["HTML", "CSS", "JavaScript", "API", "GSAP"]
   },
   {
@@ -129,7 +129,7 @@ export const projectData = [
     description: "A static front-end replica of the official Netflix landing page, recreated with HTML and CSS. Fully responsive and visually aligned with Netflix's original layout, showcasing clean design structure and modern web styling.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/Netflix.png",
     live: "https://adapalabhargavakrishna.github.io/Web-Development/Netflix/Netflix.html",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/Netflix",
     tech: ["HTML", "CSS"]
   }
 ];
