@@ -16,6 +16,7 @@ import groqLogo from '../assets/svg/groq.svg';
 import pythonLogo from '../assets/svg/python.svg';
 import reactjsLogo from '../assets/svg/reactjs.svg';
 import bootstrapLogo from '../assets/svg/bootstrap.svg';
+import figmaLogo from '../assets/svg/figma.svg';
 import nextjsLogo from '../assets/svg/nextjs.svg';
 import expressjsLogo from '../assets/svg/expressjs.svg';
 import framerLogo from '../assets/svg/framermotion.svg';
@@ -43,6 +44,7 @@ export const techStack = [
   { name: 'MongoDB', logo: mongodbLogo },
   { name: 'MySQL', logo: mysqlLogo },
   { name: 'Firebase', logo: firebaseLogo },
+  { name: 'Figma', logo: figmaLogo },
   { name: 'Framer Motion', logo: framerLogo },
   { name: 'GSAP', logo: gsapLogo },
   { name: 'Postman', logo: postmanLogo },
