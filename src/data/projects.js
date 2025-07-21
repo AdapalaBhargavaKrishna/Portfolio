@@ -35,14 +35,6 @@ export const projectData = [
     tech: ["React", "Tailwind", "Framer Motion", "ffmpeg", "Vercel"],
   },
   {
-    title: "MovieShelf - Watchlist, Reviews & More",
-    description: "A feature-rich movie companion app that lets users search, save, and organize favorite movies with Firebase Auth. It includes detailed info like ratings, trailers, and cast for an immersive experience.",
-    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/movieshelf.png",
-    live: "https://movieshelf-bk.netlify.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/MovieShelf",
-    tech: ["React", "Tailwind", "GSAP", "API", "Firebase"],
-  },
-  {
     title: "Attendance Calculator – Automated web app",
     description: "A full-stack web app that helps students calculate and predict attendance requirements. CBIT students can also fetch their live attendance using roll number via Selenium automation. Built with React, Node.js, Express, Tailwind CSS, and Framer Motion for a sleek, animated user experience.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendancecalculator.png",
@@ -50,6 +42,14 @@ export const projectData = [
     code: "https://github.com/AdapalaBhargavaKrishna/Attendance-Calculator",
     tech: ["React", "Tailwind", "Node.js", "Express.js", "Framer Motion"],
     video: "https://www.youtube.com/embed/oa77CjwTnxE?si=jeu5otIbgyEE4-SC"
+  },
+  {
+    title: "MovieShelf - Watchlist, Reviews & More",
+    description: "A feature-rich movie companion app that lets users search, save, and organize favorite movies with Firebase Auth. It includes detailed info like ratings, trailers, and cast for an immersive experience.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/movieshelf.png",
+    live: "https://movieshelf-bk.netlify.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/MovieShelf",
+    tech: ["React", "Tailwind", "GSAP", "API", "Firebase"],
   },
   {
     title: "SafePass - Password Vault",
