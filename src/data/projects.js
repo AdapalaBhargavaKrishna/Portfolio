@@ -27,14 +27,6 @@ export const projectData = [
     video: "https://www.youtube.com/embed/FBZh1hZPT3U?si=ZJuNoNHLfk8oQNEO",
   },
   {
-    title: "File Switch - Convert Any File Easily",
-    description: "A powerful file converter web app that allows users to convert images, audio, and video formats directly in the browser using FFmpeg.wasm. It features drag-and-drop upload, smart format detection, a dark/light mode toggle, and smooth Framer Motion animations for a seamless user experience.",
-    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/fileswitch.png",
-    live: "https://fileswitch.vercel.app/",
-    code: "https://github.com/AdapalaBhargavaKrishna/FileSwitch",
-    tech: ["React", "Tailwind", "Framer Motion", "ffmpeg", "Vercel"],
-  },
-  {
     title: "Attendance Calculator – Automated web app",
     description: "A full-stack web app that helps students calculate and predict attendance requirements. CBIT students can also fetch their live attendance using roll number via Selenium automation. Built with React, Node.js, Express, Tailwind CSS, and Framer Motion for a sleek, animated user experience.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendancecalculator.png",
@@ -50,6 +42,14 @@ export const projectData = [
     live: "https://movieshelf-bk.netlify.app/",
     code: "https://github.com/AdapalaBhargavaKrishna/Web-Development/tree/main/MovieShelf",
     tech: ["React", "Tailwind", "GSAP", "API", "Firebase"],
+  },
+  {
+    title: "File Switch - Convert Any File Easily",
+    description: "A powerful file converter web app that allows users to convert images, audio, and video formats directly in the browser using FFmpeg.wasm. It features drag-and-drop upload, smart format detection, a dark/light mode toggle, and smooth Framer Motion animations for a seamless user experience.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/fileswitch.png",
+    live: "https://fileswitch.vercel.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/FileSwitch",
+    tech: ["React", "Tailwind", "Framer Motion", "ffmpeg", "Vercel"],
   },
   {
     title: "SafePass - Password Vault",
