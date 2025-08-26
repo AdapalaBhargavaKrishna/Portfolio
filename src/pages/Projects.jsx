@@ -116,7 +116,7 @@ const Projects = () => {
               {projectData[currentIndex].description}
             </motion.p>
 
-            <div className="flex flex-wrap max-w-xs gap-3 mb-6">
+            <div className="flex flex-wrap max-w-md gap-3 mb-6">
               {projectData[currentIndex].tech?.map((tech, i) => (
                 <motion.div
                   key={`${tech}-${i}`}
