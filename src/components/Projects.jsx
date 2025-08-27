@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Contact from '../components/Contact'
-import githublogo from '../assets/svg/githubw.svg'
-import { techMap } from '../data/techMap';
-import ProjectCard from '../layout/ProjectCard'
-import { useLocation } from 'react-router-dom'
-import { projectData } from '../data/projects'
-import colsvg from '../assets/svg/horizontal.svg'
-import videosvg from '../assets/svg/videoc.svg'
-import closesvg from '../assets/svg/close.svg'
-import gridsvg from '../assets/svg/grid.svg'
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Contact from "../components/Contact";
+import githublogo from "../assets/svg/githubw.svg";
+import { techMap } from "../data/techMap";
+import ProjectCard from "../layout/ProjectCard";
+import { useLocation } from "react-router-dom";
+import { projectData } from "../data/projects";
+import colsvg from "../assets/svg/horizontal.svg";
+import videosvg from "../assets/svg/videoc.svg";
+import closesvg from "../assets/svg/close.svg";
+import gridsvg from "../assets/svg/grid.svg";
 
 const Projects = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVertical, setIsVertical] = useState(true)
-  const [currentVideo, setcurrentVideo] = useState(null)
+  const [isVertical, setIsVertical] = useState(true);
+  const [currentVideo, setcurrentVideo] = useState(null);
 
   const { pathname } = useLocation();
   useEffect(() => {
@@ -27,36 +27,47 @@ const Projects = () => {
       if (window.innerWidth < 760) {
         setIsVertical(false);
       } else {
-        setIsVertical(true)
+        setIsVertical(true);
       }
     };
     handleResize();
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize);
-  }, [])
-
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
       <div className="bg-black min-h-screen text-white px-4 md:px-8 py-28 pb-[15%]">
-        <p className="text-center text-neutral-400 text-sm">From Idea to Interface</p>
+        <p className="text-center text-neutral-400 text-sm">
+          From Idea to Interface
+        </p>
         <motion.div
           className="text-3xl ml-2 md:text-6xl font-bold text-center mb-5 flex items-center justify-center gap-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}>
+          transition={{ duration: 0.5 }}
+        >
           <span className="text-white">Code &</span>
-          <span className="project-heading inline-block mt-1 md:mt-3 bg-gradient-to-r from-[#ff8000] via-[#f0c] to-[#04f] bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
-            style={{ backgroundSize: "200% 200%" }}>
+          <span
+            className="project-heading inline-block mt-1 md:mt-3 bg-gradient-to-r from-[#ff8000] via-[#f0c] to-[#04f] bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
+            style={{ backgroundSize: "200% 200%" }}
+          >
             Creativity
           </span>
         </motion.div>
         {currentVideo && (
           <div className="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-70">
             <div className="relative w-[90%] md:w-[70%] lg:w-[70%] aspect-video bg-opacity-80 rounded-xl overflow-hidden shadow-xl p-7">
-
-              <iframe className='w-full h-full' src={`${currentVideo}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe
+                className="w-full h-full"
+                src={`${currentVideo}`}
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
               <button
                 onClick={() => setcurrentVideo(null)}
                 className="absolute top-2 right-2 text-white bg-black/60 hover:bg-black/80 p-2 rounded-full"
@@ -68,19 +79,36 @@ const Projects = () => {
           </div>
         )}
 
-        <div className='hidden md:flex flex-wrap items-center gap-4 justify-end md:justify-end w-full md:w-11/12 pr-0 md:pr-5 mx-auto mb-2'>
-          <button onClick={() => setIsVertical(true)} className={`${isVertical ? 'bg-neutral-800 border border-neutral-600 p-2 rounded-xl' : 'p-2'}`}>
+        <div className="hidden md:flex flex-wrap items-center gap-4 justify-end md:justify-end w-full md:w-11/12 pr-0 md:pr-5 mx-auto mb-2">
+          <button
+            onClick={() => setIsVertical(true)}
+            className={`${
+              isVertical
+                ? "bg-neutral-800 border border-neutral-600 p-2 rounded-xl"
+                : "p-2"
+            }`}
+          >
             <img src={colsvg} alt="Vertical layout" className="w-6 h-6" />
           </button>
-          <button onClick={() => setIsVertical(false)} className={`${!isVertical ? 'bg-neutral-800 border border-neutral-600 p-2 rounded-xl' : 'p-2'}`}>
+          <button
+            onClick={() => setIsVertical(false)}
+            className={`${
+              !isVertical
+                ? "bg-neutral-800 border border-neutral-600 p-2 rounded-xl"
+                : "p-2"
+            }`}
+          >
             <img src={gridsvg} alt="Grid layout" className="w-6 h-6" />
           </button>
         </div>
 
-        <hr className='border border-neutral-800 w-11/12 mx-auto mb-20' />
+        <hr className="border border-neutral-800 w-11/12 mx-auto mb-20" />
 
-        <div className={`${isVertical ? 'hidden md:flex ' : 'hidden'} relative gap-10`}>
-
+        <div
+          className={`${
+            isVertical ? "hidden md:flex " : "hidden"
+          } relative gap-10`}
+        >
           <div className="w-full lg:w-3/5 flex flex-col gap-20">
             {projectData.map((project, index) => (
               <motion.div
@@ -98,19 +126,23 @@ const Projects = () => {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   style={{
-                    transform: `perspective(800px) rotateY(${isHovered ? '2deg' : '0deg'}) rotateX(${isHovered ? '-2deg' : '0deg'})`,
-                    transition: 'transform 0.5s ease-out',
+                    transform: `perspective(800px) rotateY(${
+                      isHovered ? "2deg" : "0deg"
+                    }) rotateX(${isHovered ? "-2deg" : "0deg"})`,
+                    transition: "transform 0.5s ease-out",
                     boxShadow: isHovered
-                      ? '0 50px 100px -20px rgba(0, 0, 0, 0.3), 0 30px 60px -30px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(123, 31, 162, 0.2)'
-                      : '0 20px 40px -20px rgba(0, 0, 0, 0.1)',
-                    backgroundColor: 'rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)',
+                      ? "0 50px 100px -20px rgba(0, 0, 0, 0.3), 0 30px 60px -30px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(123, 31, 162, 0.2)"
+                      : "0 20px 40px -20px rgba(0, 0, 0, 0.1)",
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                    backdropFilter: "blur(10px)",
                   }}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className={`rounded-xl w-full h-full object-cover transition-transform duration-700 ${isHovered ? 'scale-105' : ''}`}
+                    className={`rounded-xl w-full h-full object-cover transition-transform duration-700 ${
+                      isHovered ? "scale-105" : ""
+                    }`}
                   />
                 </div>
               </motion.div>
@@ -126,7 +158,7 @@ const Projects = () => {
             >
               <motion.h2
                 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight"
-                key={currentIndex + 'title'}
+                key={currentIndex + "title"}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
@@ -136,7 +168,7 @@ const Projects = () => {
 
               <motion.p
                 className="mb-6 max-w-md text-gray-400 text-base leading-relaxed"
-                key={currentIndex + 'desc'}
+                key={currentIndex + "desc"}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
@@ -144,25 +176,27 @@ const Projects = () => {
                 {projectData[currentIndex].description}
               </motion.p>
 
-              <div className="flex flex-wrap max-w-xs gap-3 mb-6">
+              <div className="flex flex-wrap max-w-[25rem] gap-3 mb-6">
                 {projectData[currentIndex].tech?.map((tech, i) => (
                   <motion.div
                     key={`${tech}-${i}`}
-                    className="flex items-center gap-2 px-4 py-2 bg-neutral-900 border border-neutral-700 rounded-3xl"
+                    className="flex items-center gap-2 px-4 py-2 bg-neutral-950 border border-neutral-700 rounded-xl"
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                   >
                     <img src={techMap[tech]} alt={tech} className="w-5 h-5" />
-                    <span className="text-sm font-mono text-gray-300">{tech}</span>
+                    <span className="text-sm font-mono text-gray-300">
+                      {tech}
+                    </span>
                   </motion.div>
                 ))}
               </div>
 
               <motion.div
                 className="flex gap-7 "
-                key={currentIndex + 'buttons'}
+                key={currentIndex + "buttons"}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
@@ -180,13 +214,25 @@ const Projects = () => {
                   />
                 </a>
 
-                {projectData[currentIndex].video &&
-                  <a onClick={() => setcurrentVideo(projectData[currentIndex].video)} className='cursor-pointer' target="_blank" rel="noreferrer" title='Preview Video'>
-                    <img src={videosvg} className='w-8 h-11' alt="" />
+                {projectData[currentIndex].video && (
+                  <a
+                    onClick={() =>
+                      setcurrentVideo(projectData[currentIndex].video)
+                    }
+                    className="cursor-pointer"
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Preview Video"
+                  >
+                    <img src={videosvg} className="w-8 h-11" alt="" />
                   </a>
-                }
+                )}
 
-                <a href={projectData[currentIndex].live} target="_blank" rel="noreferrer">
+                <a
+                  href={projectData[currentIndex].live}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group relative inline-flex h-10 md:h-11 items-center justify-center rounded-full px-4 bg-white font-normal text-black">
                     <span>Check It Out</span>
                     <div className="relative ml-1 h-5 w-5 overflow-hidden">
@@ -226,17 +272,17 @@ const Projects = () => {
                     </div>
                   </button>
                 </a>
-
-
               </motion.div>
             </motion.div>
-
           </div>
-
         </div>
 
         {/* Mobile  */}
-        <div className={`${!isVertical ? 'grid ' : 'hidden '} md:mx-44 grid-cols-1 sm:grid-cols-2 p-1 gap-20`}>
+        <div
+          className={`${
+            !isVertical ? "grid " : "hidden "
+          } md:mx-44 grid-cols-1 sm:grid-cols-2 p-1 gap-20`}
+        >
           {projectData.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
