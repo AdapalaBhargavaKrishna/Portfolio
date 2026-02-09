@@ -28,6 +28,7 @@ import tailwindLogo from '../assets/svg/tailwind.svg';
 import npmLogo from '../assets/svg/npm.svg';
 import vercelLogo from '../assets/svg/vercel.svg';
 import vscodeLogo from '../assets/svg/vscode.svg';
+import codeLogo from '../assets/svg/code.svg';
 
 export const techStack = [
   { name: 'React', logo: reactjsLogo },
@@ -55,9 +56,10 @@ export const techStack = [
   { name: 'VS Code', logo: vscodeLogo },
   { name: 'Vercel', logo: vercelLogo },
   { name: 'Netlify', logo: netlifyLogo },
+  { name: 'Code', logo: codeLogo },
 ];
 
-export const techMap =  {
+export const techMap = {
   HTML: htmlLogo,
   CSS: cssLogo,
   JavaScript: javascriptLogo,
@@ -86,4 +88,6 @@ export const techMap =  {
   Postman: postmanLogo,
   Vercel: vercelLogo,
   Netlify: netlifyLogo,
+  JWT: codeLogo,
+  ExcelJS: codeLogo,
 };

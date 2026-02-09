@@ -27,6 +27,14 @@ export const projectData = [
     video: "https://www.youtube.com/embed/FBZh1hZPT3U?si=ZJuNoNHLfk8oQNEO",
   },
   {
+    title: "InternTrack – Internship Management System",
+    description: "InternTrack is a role-based internship management platform for colleges. Students can submit, edit, and manage internship details, while faculty can review, accept, or reject submissions through a centralized dashboard. The system replaces manual tracking with automated data handling and supports one-click Excel report generation for efficient record keeping.",
+    image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/InternTrack.png",
+    live: "https://interntrack-rust.vercel.app/",
+    code: "https://github.com/AdapalaBhargavaKrishna/InternTrack",
+    tech: ["React", "Tailwind", "Node.js", "Express.js", "MongoDB", "JWT", "ExcelJS", "Vercel", "Framer Motion"],
+  },
+  {
     title: "Attendance Calculator – Automated web app",
     description: "A full-stack web app that helps students calculate and predict attendance requirements. CBIT students can also fetch their live attendance using roll number via Selenium automation. Built with React, Node.js, Express, Tailwind CSS, and Framer Motion for a sleek, animated user experience.",
     image: "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/attendancecalculator.png",
