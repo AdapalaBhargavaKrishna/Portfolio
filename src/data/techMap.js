@@ -21,6 +21,7 @@ import nextjsLogo from '../assets/svg/nextjs.svg';
 import expressjsLogo from '../assets/svg/expressjs.svg';
 import framerLogo from '../assets/svg/framermotion.svg';
 import gsapLogo from '../assets/svg/gsap.svg';
+import postgreLogo from '../assets/svg/postgresql.svg';
 import flasklogo from '../assets/svg/flask.svg';
 import ffmpeglogo from '../assets/svg/ffmpeg.svg';
 import apilogo from '../assets/svg/api.svg';
@@ -44,6 +45,7 @@ export const techStack = [
   { name: 'Cloud', logo: cloudLogo },
   { name: 'MongoDB', logo: mongodbLogo },
   { name: 'MySQL', logo: mysqlLogo },
+  { name: 'PostgreSQL', logo: postgreLogo },
   { name: 'Firebase', logo: firebaseLogo },
   { name: 'Figma', logo: figmaLogo },
   { name: 'Framer Motion', logo: framerLogo },
