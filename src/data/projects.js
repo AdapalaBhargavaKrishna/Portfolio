@@ -2,7 +2,7 @@ export const projectData = [
   {
     title: "StreamSync – Watch Together, From Anywhere",
     description:
-      "Built a real-time co-watching platform using Socket.IO to synchronize YouTube playback state across multiple clients with sub-second latency. Engineered room-based session management where a host controls play/pause/seek events that broadcast to all connected peers. Handled edge cases like late-joiners syncing to current timestamp, user disconnection cleanup, and chat message ordering. Deployed backend on a persistent Node.js server to maintain WebSocket connections across sessions.",
+      "Built a real-time co-watching platform using Socket.IO to synchronize YouTube playback state across multiple clients with sub-second latency. Engineered room-based session management where a host controls play/pause/seek events that broadcast to all connected peers.Deployed backend on a persistent Node.js server to maintain WebSocket connections across sessions.",
     image:
       "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/streamsync.png",
     live: "https://streamsyncc.vercel.app",
