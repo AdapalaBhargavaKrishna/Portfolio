@@ -30,9 +30,13 @@ import npmLogo from '../assets/svg/npm.svg';
 import vercelLogo from '../assets/svg/vercel.svg';
 import vscodeLogo from '../assets/svg/vscode.svg';
 import codeLogo from '../assets/svg/code.svg';
+import fastapiLogo from '../assets/svg/fastapi.svg';
+import prismaLogo from '../assets/svg/prisma.svg';
+import redisLogo from '../assets/svg/redis.svg';
 
 export const techStack = [
   { name: 'React', logo: reactjsLogo },
+  { name: 'Next.js', logo: nextjsLogo },
   { name: 'JavaScript', logo: javascriptLogo },
   { name: 'Python', logo: pythonLogo },
   { name: 'Java', logo: javaLogo },
@@ -43,6 +47,10 @@ export const techStack = [
   { name: 'Node.js', logo: nodeLogo },
   { name: 'Express.js', logo: expressjsLogo },
   { name: 'Cloud', logo: cloudLogo },
+  { name: 'Groq AI', logo: groqLogo },
+  { name: 'FastAPI', logo: fastapiLogo },
+  { name: 'Prisma', logo: prismaLogo },
+  { name: 'Redis', logo: redisLogo },
   { name: 'MongoDB', logo: mongodbLogo },
   { name: 'MySQL', logo: mysqlLogo },
   { name: 'PostgreSQL', logo: postgreLogo },
