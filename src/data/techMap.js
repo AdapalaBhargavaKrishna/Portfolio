@@ -30,6 +30,7 @@ import apilogo from '../assets/svg/api.svg';
 import tailwindLogo from '../assets/svg/tailwind.svg';
 import npmLogo from '../assets/svg/npm.svg';
 import vercelLogo from '../assets/svg/vercel.svg';
+import supabaseLogo from '../assets/svg/supabase.svg';
 import renderLogo from '../assets/svg/render.svg';
 import vscodeLogo from '../assets/svg/vscode.svg';
 import codeLogo from '../assets/svg/code.svg';
@@ -109,6 +110,7 @@ export const techMap = {
   'VS Code': vscodeLogo,
   Postman: postmanLogo,
   Vercel: vercelLogo,
+  Supabase: supabaseLogo,
   Render: renderLogo,
   Netlify: netlifyLogo,
   ExcelJS: codeLogo,
@@ -169,6 +171,7 @@ export const techCategories = [
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
+      { name: 'Supabase', logo: supabaseLogo },
       { name: 'npm', logo: npmLogo },
     ],
   },
