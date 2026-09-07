@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">RAG — Retrieval Augmented Generation</title>
+  <desc id="desc">A modern portfolio skill icon showing documents being retrieved, augmented, and passed to a generative AI core.</desc>
+  <defs>
+    <linearGradient id="g" x1="24" y1="24" x2="232" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="78" y1="72" x2="182" y2="184" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <!-- document / retrieval nodes -->
+  <g fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 58h38v28H35z"/>
+    <path d="M35 107h38v28H35z"/>
+    <path d="M35 156h38v28H35z"/>
+    <path d="M44 67h20M44 116h20M44 165h20" stroke-width="5"/>
+
+    <!-- retrieval arrows -->
+    <path d="M77 72c21 0 25 15 37 27"/>
+    <path d="M77 121h31"/>
+    <path d="M77 170c21 0 25-15 37-27"/>
+    <path d="M105 91l9 8-11 4M108 121h12M105 151l11-4-9-8" stroke-width="5"/>
+
+    <!-- generation output -->
+    <path d="M179 121h39"/>
+    <path d="M208 111l10 10-10 10"/>
+  </g>
+
+  <!-- AI core -->
+  <g filter="url(#shadow)">
+    <circle cx="153" cy="121" r="48" fill="url(#g2)" opacity=".14"/>
+    <circle cx="153" cy="121" r="38" fill="#0F172A" stroke="url(#g2)" stroke-width="5"/>
+  </g>
+
+  <!-- neural / sparkle mark -->
+  <g fill="none" stroke="url(#g2)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="153" cy="121" r="8" fill="url(#g2)" stroke="none"/>
+    <circle cx="137" cy="105" r="4" fill="url(#g2)" stroke="none"/>
+    <circle cx="169" cy="105" r="4" fill="url(#g2)" stroke="none"/>
+    <circle cx="137" cy="137" r="4" fill="url(#g2)" stroke="none"/>
+    <circle cx="169" cy="137" r="4" fill="url(#g2)" stroke="none"/>
+    <path d="M140 108l9 9M166 108l-9 9M140 134l9-9M166 134l-9-9"/>
+  </g>
+
+  <!-- tiny generation spark -->
+  <g fill="url(#g)">
+    <path d="M220 55l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+  </g>
+</svg>

@@ -4,21 +4,41 @@
 
 @layer base {
   :root {
-    --bg-primary: #FAF8F5;
-    --bg-secondary: #F0EDE8;
-    --bg-elevated: #FFFFFF;
-    --text-primary: #1A1A1A;
-    --text-secondary: #5C5C5C;
-    --text-tertiary: #8A8A8A;
-    --accent: #C2662D;
-    --accent-soft: rgba(194, 102, 45, 0.08);
-    --accent-hover: #A8552A;
-    --border: #E5E1DC;
+    --bg-primary: #F5F2EB;
+    --bg-secondary: #E8E2D6;
+    --bg-elevated: #FFFDF8;
+    --text-primary: #2D241E;
+    --text-secondary: #4A3B32;
+    --text-tertiary: #7A6B63;
+    --accent: #8C593B;
+    --accent-soft: rgba(140, 89, 59, 0.08);
+    --accent-hover: #6B4226;
+    --border: #E8E2D6;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-scroll-container] {
+    will-change: transform;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
+    scrollbar-color: var(--accent) transparent;
   }
 
   html {
@@ -81,5 +101,17 @@
       black 85%,
       transparent 100%
     );
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .translate-z-10 {
+    transform: translateZ(30px);
   }
 }

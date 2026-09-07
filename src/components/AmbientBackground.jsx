@@ -20,7 +20,7 @@ export default function AmbientBackground() {
 
       {/* Floating Gradient Meshes */}
       <motion.div
-        className="absolute top-[-10%] left-[-15%] w-[60vw] h-[60vw] rounded-full bg-[#C2662D]/[0.03] blur-[130px]"
+        className="absolute top-[-10%] left-[-15%] w-[60vw] h-[60vw] rounded-full bg-accent/[0.04] blur-[130px]"
         animate={{
           x: [0, 50, -30, 0],
           y: [0, -40, 30, 0],

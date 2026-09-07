@@ -31,6 +31,31 @@ export const projectData = [
     video: "",
     featured: true,
 },
+{
+  title: "TranscriptIQ",
+  subtitle: "RAG-Powered Video & Audio Intelligence Tool",
+  description:
+    "Built an end-to-end pipeline that transcribes YouTube videos or local audio/video files using local Whisper for English and Sarvam AI for Hinglish translation, then generates summaries, action items, key decisions, and open questions via chained LLM calls. Implemented a RAG chat system using ChromaDB vector storage with HuggingFace sentence embeddings and LangChain LCEL to answer follow-up questions grounded in the transcript. Designed a map-reduce summarization chain that chunks long transcripts, summarizes each chunk independently, then combines them into one coherent summary to handle long-form content within context limits.",
+  shortDescription: "RAG-powered transcript intelligence tool with Whisper transcription and chained summarization.",
+  image:
+    "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/transcriptiq.png",
+  live: "",
+  code: "https://github.com/AdapalaBhargavaKrishna/TranscriptIQ",
+  tech: [
+    "Python",
+    "LangChain",
+    "RAG",
+    "ChromaDB",
+    "Mistral AI",
+    "Groq AI",
+    "HuggingFace",
+    "Whisper",
+    "Sarvam AI",
+    "Streamlit",
+  ],
+  video: "",
+  featured: true,
+},
   {
     title: "StreamSync",
     subtitle: "Watch Together, From Anywhere",

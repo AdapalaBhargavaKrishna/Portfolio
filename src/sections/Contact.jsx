@@ -98,7 +98,7 @@ const Contact = () => {
     <section id="contact" className="py-24 md:py-32 section-padding bg-ivory relative z-10 overflow-hidden select-none">
       <div className="max-w-6xl mx-auto w-full">
         {/* Large visual card container */}
-        <div className="bg-charcoal text-ivory rounded-[3rem] p-8 md:p-16 border border-white/5 relative overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="bg-[#1A1A1A] text-ivory rounded-[3rem] p-8 md:p-16 border border-white/5 relative overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Rotating typography badge in the corner */}
           <div className="absolute right-8 top-8 w-28 h-28 pointer-events-none opacity-20 hidden md:block">

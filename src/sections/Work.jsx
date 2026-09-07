@@ -63,7 +63,7 @@ const FeaturedImage = ({ image, title, onClick, hasVideo }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-[2rem] overflow-hidden border border-border bg-ivory-200 aspect-[16/10] w-full relative z-0"
+      className="rounded-[2rem] overflow-hidden border border-border bg-ivory-200 aspect-[16/9] w-full relative z-0"
     >
       <motion.div
         onMouseMove={handleMouseMove}
@@ -71,7 +71,7 @@ const FeaturedImage = ({ image, title, onClick, hasVideo }) => {
         onClick={onClick}
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
         whileHover={{
-          scale: 1.015,
+          scale: 1.01,
           y: -4,
           boxShadow: '0 30px 60px -15px rgba(26, 26, 26, 0.15)',
         }}

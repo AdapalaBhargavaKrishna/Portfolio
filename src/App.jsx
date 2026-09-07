@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import { Toaster } from 'react-hot-toast'
+import Lenis from 'lenis'
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Hero from "./sections/Hero"
@@ -33,7 +34,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={
           <PageTransition>
-            <main className="relative z-10">
+            <main className="relative z-10 w-full overflow-hidden">
               <Hero />
               <About />
               <Work />
@@ -43,7 +44,7 @@ function AnimatedRoutes() {
         } />
         <Route path="/projects" element={
           <PageTransition>
-            <main className="relative z-10">
+            <main className="relative z-10 w-full overflow-hidden">
               <ProjectsPage />
             </main>
           </PageTransition>
@@ -55,9 +56,32 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  }, []);
+
   return (
     <Router>
-      <div className="min-h-screen bg-ivory font-sans text-charcoal relative overflow-x-hidden">
+      <div className="min-h-screen bg-ivory font-sans text-charcoal relative">
         <Toaster
           position="top-right"
           containerStyle={{

@@ -1,154 +1,130 @@
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import SplitText from '../components/SplitText';
-import Magnetic from '../components/Magnetic';
+import React, { useRef, useLayoutEffect, useState, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ElasticStrings from '../components/ElasticStrings';
 
-const roles = [
-  'Full-Stack Developer',
-  'AI Systems Builder', 
-  'Backend Engineer',
-  'Problem Solver',
-  'Open Source Contributor'
-];
-
-const fadeUp = {
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
-};
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-  const containerRef = useRef(null);
+  const comp = useRef(null);
+  const [time, setTime] = useState(new Date());
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start'],
-  });
+  // Update time for the HUD
+  useEffect(() => {
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.92]);
-  const y = useTransform(scrollYProgress, [0, 0.8], [0, -100]);
-  const rotateX = useTransform(scrollYProgress, [0, 0.8], [0, 12]);
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // Parallax effect on scroll
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#hero-pin",
+          start: "top top",
+          end: "+=150%",
+          scrub: 1,
+          pin: true,
+        }
+      });
+      
+      tl.to(".bg-typography", {
+        yPercent: -20,
+        opacity: 0.1,
+        ease: "none"
+      }, 0);
+      
+      // Initial cinematic reveal
+      gsap.from(".hero-reveal", {
+        y: 40,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 1.8,
+        ease: "power4.out",
+        delay: 0.2
+      });
+
+    }, comp);
+    
+    return () => ctx.revert();
+  }, []);
 
   const handleScroll = (e, targetId) => {
     e.preventDefault();
     document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const formattedTime = time.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
   return (
-    <section
-      ref={containerRef}
-      id="home"
-      className="min-h-screen flex items-center section-padding relative overflow-hidden bg-ivory"
-      style={{ perspective: 1200 }}
-    >
-      <div className="absolute top-10 right-10 pointer-events-none select-none font-serif text-[18vw] leading-none text-charcoal/[0.02] font-semibold tracking-tight z-0">
-        BK
-      </div>
+    <div ref={comp} className="relative z-10 w-full bg-bg-primary overflow-hidden h-screen bg-ivory">
+      
+      {/* 1. The Interactive Physics Layer (Foreground) */}
+      <ElasticStrings />
 
-      <motion.div
-        style={{ opacity, scale, y, rotateX, transformStyle: 'preserve-3d' }}
-        className="max-w-7xl mx-auto w-full flex flex-col justify-center min-h-[70vh] z-10"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8 flex items-center gap-3"
-        >
-          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="font-sans text-xs uppercase tracking-widest text-charcoal-muted font-semibold">
-            Based in Hyderabad, India
-          </span>
-        </motion.div>
-
-        <h1 className="font-serif text-[11vw] sm:text-[9vw] lg:text-[8vw] leading-[0.95] text-charcoal select-none mb-10 tracking-tight font-normal">
-          <span className="block overflow-hidden py-3 -my-3">
-            <motion.span
-              className="inline-block"
-              initial={{ y: '110%', rotate: 4 }}
-              animate={{ y: 0, rotate: 0 }}
-              transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            >
-              Bhargava Krishna
-            </motion.span>
-          </span>
-          <span className="block overflow-hidden py-3 -my-3 italic text-charcoal-muted text-[10vw] sm:text-[8vw] lg:text-[7.5vw]">
-            <motion.span
-              className="inline-block"
-              initial={{ y: '110%', rotate: -3 }}
-              animate={{ y: 0, rotate: 0 }}
-              transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            >
-              Adapala
-            </motion.span>
-          </span>
-        </h1>
-
-        <div className="w-[110%] -mx-[5%] overflow-hidden border-y border-border/80 py-4 mb-10 select-none pointer-events-none">
-          <motion.div
-            className="flex whitespace-nowrap gap-12 font-sans text-xs uppercase tracking-widest text-charcoal-light font-semibold"
-            animate={{ x: [0, -400] }}
-            transition={{
-              repeat: Infinity,
-              ease: 'linear',
-              duration: 20,
-            }}
-          >
-            {Array(5)
-              .fill(roles)
-              .flat()
-              .map((role, idx) => (
-                <div key={idx} className="flex items-center gap-12">
-                  <span>{role}</span>
-                  <span className="text-accent">•</span>
-                </div>
-              ))}
-          </motion.div>
+      <section id="hero-pin" className="relative h-screen w-full flex flex-col justify-between z-10 select-none">
+        
+        {/* 2. Brutalist Background Typography */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none bg-typography">
+          <div className="flex flex-col text-center font-serif leading-[0.8] tracking-tighter text-charcoal/90 w-full px-4">
+            <div className="overflow-hidden mb-[-2%]">
+               <h1 className="text-[18vw] md:text-[14vw] hero-reveal">ENGINEERING</h1>
+            </div>
+            <div className="overflow-hidden mb-[-2%]">
+               <h1 className="text-[18vw] md:text-[14vw] italic text-accent hero-reveal">INTELLIGENCE</h1>
+            </div>
+            <div className="overflow-hidden">
+               <h1 className="text-[18vw] md:text-[14vw] text-charcoal-light hero-reveal">AESTHETICS</h1>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mt-4">
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
-            className="font-sans text-base md:text-lg text-charcoal-light max-w-md leading-relaxed"
-          >
-            A Software Engineer crafting high-fidelity web experiences — from pixel-perfect frontends to production-grade AI backends.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.55 }}
-            className="flex gap-6 items-center flex-shrink-0"
-          >
-            <Magnetic>
-              <a
-                href="#work"
-                onClick={(e) => handleScroll(e, 'work')}
-                className="group font-sans text-sm font-semibold text-accent hover:text-accent-hover transition flex items-center gap-1.5 cursor-pointer py-2"
-              >
-                Work Catalog
-                <span className="inline-block group-hover:translate-y-0.5 transition-transform duration-200">
-                  ↓
-                </span>
-              </a>
-            </Magnetic>
-            <Magnetic>
-              <a
-                href="#contact"
-                onClick={(e) => handleScroll(e, 'contact')}
-                className="group font-sans text-sm font-semibold text-charcoal hover:text-accent transition flex items-center gap-1.5 cursor-pointer py-2"
-              >
-                Get in Touch
-                <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
-                  →
-                </span>
-              </a>
-            </Magnetic>
-          </motion.div>
+        {/* 3. Minimal HUD (Top) */}
+        <div className="absolute top-0 w-full pt-8 px-6 md:px-12 flex justify-between items-start font-sans z-30 pointer-events-none mix-blend-difference text-white/80">
+          <div className="flex flex-col gap-1 hero-reveal">
+            <span className="text-[10px] uppercase tracking-widest font-bold">
+              SYSTEM ONLINE
+            </span>
+            <span className="text-xs font-mono">
+              [LAT] 17.3850° N, [LON] 78.4867° E
+            </span>
+          </div>
+          
+          <div className="flex flex-col items-end gap-1 hero-reveal">
+            <span className="text-[10px] uppercase tracking-widest font-bold">
+              LOCAL TIME
+            </span>
+            <span className="text-xs font-mono">
+              {formattedTime} UTC+5:30
+            </span>
+          </div>
         </div>
-      </motion.div>
-    </section>
+
+        {/* 4. Minimal HUD (Bottom/Interactive Elements) */}
+        <div className="absolute bottom-0 w-full pb-8 px-6 md:px-12 flex justify-between items-end font-sans z-30 pointer-events-auto mix-blend-difference text-white/80">
+          
+          <div className="flex flex-col max-w-xs hero-reveal mix-blend-normal text-charcoal">
+             {/* Note: The mix-blend-normal and text-charcoal overrides the parent difference so it remains readable over the ivory bg */}
+             <span className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Initialize</span>
+             <p className="text-sm text-charcoal-light leading-relaxed font-light">
+               Architecting highly aesthetic, performance-driven web experiences and production-grade AI systems.
+             </p>
+          </div>
+
+          <div className="hero-reveal mix-blend-normal">
+            <a 
+              href="#work"
+              onClick={(e) => handleScroll(e, 'work')}
+              className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold text-charcoal hover:text-accent transition-colors duration-300 group"
+            >
+              <span>Explore Work</span>
+              <span className="w-8 h-[1px] bg-charcoal group-hover:bg-accent group-hover:w-12 transition-all duration-300"></span>
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+    </div>
   );
 }

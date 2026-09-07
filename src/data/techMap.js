@@ -33,6 +33,15 @@ import vercelLogo from '../assets/svg/vercel.svg';
 import supabaseLogo from '../assets/svg/supabase.svg';
 import renderLogo from '../assets/svg/render.svg';
 import vscodeLogo from '../assets/svg/vscode.svg';
+import streamlitLogo from '../assets/svg/streamlit.svg';
+import Chromadblogo from '../assets/svg/chromadb.svg';
+import raglogo from '../assets/svg/rag.svg'
+import langchainlogo from '../assets/svg/langchain.svg'
+import mistrallogo from '../assets/svg/mistral.svg'
+import geminilogo from '../assets/svg/gemini.svg'
+import sarvamlogo from '../assets/svg/sarvam.svg'
+import whisperlogo from '../assets/svg/openai.svg'
+import huggingfacelogo from '../assets/svg/huggingface.svg'
 import codeLogo from '../assets/svg/code.svg';
 import fastapiLogo from '../assets/svg/fastapi.svg';
 import prismaLogo from '../assets/svg/prisma.svg';
@@ -63,6 +72,14 @@ export const techStack = [
   { name: 'Figma', logo: figmaLogo },
   { name: 'Framer Motion', logo: framerLogo },
   { name: 'GSAP', logo: gsapLogo },
+  { name: 'RAG', logo: raglogo },
+  { name: 'LangChain', logo: langchainlogo },
+  { name: 'Mistral AI', logo: mistrallogo },
+  { name: 'gemini AI', logo: geminilogo },
+  { name: 'Sarvam AI', logo: sarvamlogo },
+  { name: 'HuggingFace', logo: huggingfacelogo },
+  { name: 'Whisper', logo: whisperlogo },
+  { name: 'ChromaDB', logo: Chromadblogo },
   { name: 'Postman', logo: postmanLogo },
   { name: 'API', logo: apilogo },
   { name: 'Git', logo: gitLogo },
@@ -72,6 +89,7 @@ export const techStack = [
   { name: 'Vercel', logo: vercelLogo },
   { name: 'Render', logo: renderLogo },
   { name: 'Netlify', logo: netlifyLogo },
+  { name: 'Streamlit', logo: streamlitLogo },
   { name: 'JWT', logo: jwtlogo },
   { name: 'Code', logo: codeLogo },
 ];
@@ -95,8 +113,16 @@ export const techMap = {
   'Framer Motion': framerLogo,
   GSAP: gsapLogo,
   MongoDB: mongodbLogo,
+  LangChain: langchainlogo,
+  RAG: raglogo,
+  'Mistral AI': mistrallogo,
+  'Gemini AI': geminilogo,
+  'Sarvam AI': sarvamlogo,
+  'Whisper': whisperlogo,
+  HuggingFace: huggingfacelogo,
   MySQL: mysqlLogo,
   PostgreSQL: postgreLogo,
+  ChromaDB: Chromadblogo,
   Cloud: cloudLogo,
   'Google OAuth': cloudLogo,
   'Groq AI': groqLogo,
@@ -113,6 +139,7 @@ export const techMap = {
   Supabase: supabaseLogo,
   Render: renderLogo,
   Netlify: netlifyLogo,
+  Streamlit: streamlitLogo,
   ExcelJS: codeLogo,
   Selenium: codeLogo,
   'Monaco Editor': codeLogo,
@@ -159,6 +186,17 @@ export const techCategories = [
       { name: 'Firebase', logo: firebaseLogo },
       { name: 'Redis', logo: redisLogo },
       { name: 'Prisma', logo: prismaLogo },
+    ],
+  },
+  {
+    name: 'AI',
+    items: [
+      { name: 'LangChain', logo: langchainlogo },
+      { name: 'RAG', logo: raglogo },
+      { name: 'Groq AI', logo: groqLogo },
+      { name: 'Mistral AI', logo: mistrallogo },
+      { name: 'Gemini AI', logo: geminilogo },
+      { name: 'HuggingFace', logo: huggingfacelogo },
     ],
   },
   {
