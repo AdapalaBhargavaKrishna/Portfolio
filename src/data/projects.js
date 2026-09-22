@@ -7,7 +7,7 @@ export const projectData = [
     shortDescription: "Full-stack AI career platform with resume analysis, mock interviews, and personalized roadmaps.",
     image:
       "https://adapalabhargavakrishna.github.io/Web-Development/Portfolio/assets/elevateai.png",
-    live: "elevateai-career.vercel.app",
+    live: "https://elevateai-career.vercel.app",
     code: "https://github.com/AdapalaBhargavaKrishna/ElevateAI",
     tech: [
       "Next.js",
