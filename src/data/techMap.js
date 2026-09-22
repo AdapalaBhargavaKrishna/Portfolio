@@ -28,6 +28,7 @@ import flasklogo from '../assets/svg/flask.svg';
 import ffmpeglogo from '../assets/svg/ffmpeg.svg';
 import apilogo from '../assets/svg/api.svg';
 import tailwindLogo from '../assets/svg/tailwind.svg';
+import dockerLogo from '../assets/svg/docker.svg';
 import npmLogo from '../assets/svg/npm.svg';
 import vercelLogo from '../assets/svg/vercel.svg';
 import supabaseLogo from '../assets/svg/supabase.svg';
@@ -72,6 +73,7 @@ export const techStack = [
   { name: 'Figma', logo: figmaLogo },
   { name: 'Framer Motion', logo: framerLogo },
   { name: 'GSAP', logo: gsapLogo },
+  { name: 'Docker', logo: dockerLogo },
   { name: 'RAG', logo: raglogo },
   { name: 'LangChain', logo: langchainlogo },
   { name: 'Mistral AI', logo: mistrallogo },
@@ -159,6 +161,7 @@ export const techCategories = [
       { name: 'React', logo: reactjsLogo },
       { name: 'Next.js', logo: nextjsLogo },
       { name: 'JavaScript', logo: javascriptLogo },
+      { name: 'TypeScript', logo: typescriptLogo },
       { name: 'HTML', logo: htmlLogo },
       { name: 'CSS', logo: cssLogo },
       { name: 'Tailwind', logo: tailwindLogo },
@@ -204,6 +207,7 @@ export const techCategories = [
     items: [
       { name: 'Git', logo: gitLogo },
       { name: 'GitHub', logo: githubLogo },
+      { name: 'Docker', logo: dockerLogo },
       { name: 'Figma', logo: figmaLogo },
       { name: 'Postman', logo: postmanLogo },
       { name: 'VS Code', logo: vscodeLogo },
