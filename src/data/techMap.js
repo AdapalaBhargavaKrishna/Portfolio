@@ -13,7 +13,7 @@ import socketioLogo from '../assets/svg/socketio.svg';
 import netlifyLogo from '../assets/svg/netlify.svg';
 import nodeLogo from '../assets/svg/node.svg';
 import postmanLogo from '../assets/svg/postman.svg';
-import cloudLogo from '../assets/svg/cloud.svg';
+import googlecloudLogo from '../assets/svg/googlecloud.svg';
 import groqLogo from '../assets/svg/groq.svg';
 import pythonLogo from '../assets/svg/python.svg';
 import reactjsLogo from '../assets/svg/reactjs.svg';
@@ -61,7 +61,7 @@ export const techStack = [
   { name: 'BootStrap', logo: bootstrapLogo },
   { name: 'Node.js', logo: nodeLogo },
   { name: 'Express.js', logo: expressjsLogo },
-  { name: 'Cloud', logo: cloudLogo },
+  { name: 'Cloud', logo: googlecloudLogo },
   { name: 'Groq AI', logo: groqLogo },
   { name: 'FastAPI', logo: fastapiLogo },
   { name: 'Prisma', logo: prismaLogo },
@@ -125,8 +125,8 @@ export const techMap = {
   MySQL: mysqlLogo,
   PostgreSQL: postgreLogo,
   ChromaDB: Chromadblogo,
-  Cloud: cloudLogo,
-  'Google OAuth': cloudLogo,
+  Cloud: googlecloudLogo,
+  'Google OAuth': googlecloudLogo,
   'Groq AI': groqLogo,
   Firebase: firebaseLogo,
   Git: gitLogo,
