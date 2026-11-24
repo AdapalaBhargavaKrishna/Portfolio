@@ -38,6 +38,7 @@ import streamlitLogo from '../assets/svg/streamlit.svg';
 import Chromadblogo from '../assets/svg/chromadb.svg';
 import raglogo from '../assets/svg/rag.svg'
 import langchainlogo from '../assets/svg/langchain.svg'
+import langgraphlogo from '../assets/svg/langgraph.svg'
 import mistrallogo from '../assets/svg/mistral.svg'
 import geminilogo from '../assets/svg/gemini.svg'
 import sarvamlogo from '../assets/svg/sarvam.svg'
@@ -76,6 +77,7 @@ export const techStack = [
   { name: 'Docker', logo: dockerLogo },
   { name: 'RAG', logo: raglogo },
   { name: 'LangChain', logo: langchainlogo },
+  { name: 'LangGraph', logo: langgraphlogo },
   { name: 'Mistral AI', logo: mistrallogo },
   { name: 'gemini AI', logo: geminilogo },
   { name: 'Sarvam AI', logo: sarvamlogo },
@@ -116,6 +118,7 @@ export const techMap = {
   GSAP: gsapLogo,
   MongoDB: mongodbLogo,
   LangChain: langchainlogo,
+  Langgraph: langgraphlogo,
   RAG: raglogo,
   'Mistral AI': mistrallogo,
   'Gemini AI': geminilogo,
@@ -195,6 +198,7 @@ export const techCategories = [
     name: 'AI',
     items: [
       { name: 'LangChain', logo: langchainlogo },
+      { name: 'LangGraph', logo: langgraphlogo },
       { name: 'RAG', logo: raglogo },
       { name: 'Groq AI', logo: groqLogo },
       { name: 'Mistral AI', logo: mistrallogo },
